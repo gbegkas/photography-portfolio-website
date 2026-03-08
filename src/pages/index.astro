@@ -1,17 +1,203 @@
 ---
+import Layout from "../components/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import { getCollection } from "astro:content";
 
+const shoots = await getCollection("shoots");
+shoots.forEach(s => console.log(s.slug, s.data.cover));
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="George Begkas | Light & Lens">
+  <Navbar transparent />
+
+  <Hero
+    image="/hero.jpg"
+    title="Light & Lens"
+  />
+
+  <section class="albums" id="albums">
+    <div class="albums-header fade-up">
+      <div class="header-line"></div>
+      <h2 class="albums-title">Selected Work</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="albums-grid">
+      {shoots.map((shoot, i) => (
+        <a href={`/shoots/${shoot.slug}`} class="album-card" style={`animation-delay: ${i * 0.12}s`}>
+          <div class="album-image-wrap">
+            <img
+              src={(() => { const c = shoot.data.cover as any; return typeof c === 'string' ? c : (c?.src ?? c?.url ?? ''); })()}
+              alt={shoot.data.title}
+              class="album-image"
+              loading="lazy"
+            />
+            <div class="album-overlay">
+              <span class="album-cta">View Series →</span>
+            </div>
+          </div>
+          <div class="album-info">
+            <h3 class="album-name">{shoot.data.title}</h3>
+            {shoot.data.description && (
+              <p class="album-desc">{shoot.data.description}</p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-line"></span>
+    <p class="footer-text">© {new Date().getFullYear()} · All rights reserved</p>
+    <span class="footer-line"></span>
+  </footer>
+</Layout>
+
+<style>
+  .albums {
+    padding: 7rem 3rem 5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .albums-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 4.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+
+  .header-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(245,242,236,0.1);
+  }
+
+  .albums-title {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .album-card {
+    display: block;
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) forwards;
+    animation-delay: 0.3s;
+  }
+
+  .album-card:nth-child(2) { animation-delay: 0.42s; }
+  .album-card:nth-child(3) { animation-delay: 0.54s; }
+  .album-card:nth-child(4) { animation-delay: 0.66s; }
+  .album-card:nth-child(5) { animation-delay: 0.78s; }
+  .album-card:nth-child(6) { animation-delay: 0.90s; }
+
+  .album-image-wrap {
+    position: relative;
+    overflow: hidden;
+    background: #1a1916;
+  }
+
+  .album-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .album-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(14,13,11,0.45);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .album-cta {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+  }
+
+  .album-card:hover .album-image {
+    transform: scale(1.05);
+  }
+
+  .album-card:hover .album-overlay {
+    opacity: 1;
+  }
+
+  .album-info {
+    padding: 1.25rem 0 0;
+  }
+
+  .album-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--paper);
+    letter-spacing: 0.02em;
+  }
+
+  .album-desc {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.35rem;
+  }
+
+  .site-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 3rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .footer-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(245,242,236,0.07);
+  }
+
+  .footer-text {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,242,236,0.25);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .albums {
+      padding: 5rem 1.5rem 3rem;
+    }
+    .albums-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

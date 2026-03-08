@@ -1,0 +1,137 @@
+---
+import Layout from "../components/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout title="About — Light & Lens">
+  <Navbar />
+
+  <div class="about-page">
+    <div class="about-inner">
+      <div class="about-label fade-up">About</div>
+      <h1 class="about-heading fade-up fade-up-delay-1">
+        The eye behind<br/>
+        <em>the lens</em>
+      </h1>
+      <div class="about-divider fade-up fade-up-delay-2"></div>
+      <div class="about-body fade-up fade-up-delay-2">
+        <p>
+          Hi, I’m George, a photographer passionate about capturing moments through light and lens.
+          My work spans landscapes, travel, animals, and events, with each photograph aiming to tell
+          a story and preserve a moment in time.
+        </p>
+        <p>
+          Photography began as a creative outlet alongside my main profession in software engineering,
+          but over time it has grown into a meaningful part of how I explore and experience the world.
+          Whether it’s the changing light over a landscape, the character of an animal, or the atmosphere
+          of a live event, I’m drawn to moments that feel natural, authentic, and worth remembering.
+        </p>
+        <p>
+          Through photography I enjoy slowing down and observing the details that often go unnoticed.
+          Light, composition, and timing are at the core of how I approach every frame.
+        </p>
+        <p>
+          This portfolio is a collection of personal projects and selected work that reflects my
+          journey as a photographer. Alongside these galleries, I also explore specialized projects
+          such as equestrian photography and other creative collaborations.
+        </p>
+        <!--<p>-->
+        <!--  This is your space to connect with the people who find your work.-->
+        <!--</p>-->
+      </div>
+
+      <a href="/" class="about-back fade-up fade-up-delay-3">← View Work</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 4rem;
+    position: relative;
+  }
+
+  .about-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(200,169,110,0.04) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .about-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .about-label {
+    font-size: 0.58rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+  }
+
+  .about-heading {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+    opacity: 0;
+  }
+
+  .about-heading em {
+    color: rgba(245,242,236,0.5);
+    font-style: italic;
+  }
+
+  .about-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--accent);
+    margin: 2.5rem 0;
+    opacity: 0;
+  }
+
+  .about-body {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-body p {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: rgba(245,242,236,0.65);
+    font-weight: 300;
+  }
+
+  .about-back {
+    display: inline-block;
+    margin-top: 3rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    transition: color 0.2s;
+    opacity: 0;
+  }
+
+  .about-back:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .about-page {
+      padding: 6rem 1.5rem 3rem;
+    }
+  }
+</style>
