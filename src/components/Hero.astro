@@ -4,12 +4,12 @@ const { image, title, subtitle } = Astro.props;
 
 <section class="hero">
   <div class="hero-image-wrap">
-    <img src={image} alt={title} class="hero-image" />
+    <img src={image} alt={title} class="hero-image" id="hero-image" />
     <div class="hero-overlay"></div>
   </div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow fade-up">George Begkas</p>
+    <p class="hero-eyebrow fade-up">Photography</p>
     <h1 class="hero-title fade-up fade-up-delay-1">{title}</h1>
     {subtitle && (
       <p class="hero-subtitle fade-up fade-up-delay-2">{subtitle}</p>
@@ -28,6 +28,48 @@ const { image, title, subtitle } = Astro.props;
     <span class="hero-meta-text">Scroll</span>
   </div>
 </section>
+
+<script>
+  const hero = document.querySelector('.hero') as HTMLElement;
+  const img = document.getElementById('hero-image') as HTMLElement;
+
+  // How many px the image can shift in each direction (image is scaled 1.08 to give room)
+  const STRENGTH = 18;
+
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let rafId: number;
+
+  function lerp(a: number, b: number, t: number) {
+    return a + (b - a) * t;
+  }
+
+  function animate() {
+    currentX = lerp(currentX, targetX, 0.06);
+    currentY = lerp(currentY, targetY, 0.06);
+    img.style.transform = `scale(1.08) translate(${currentX}px, ${currentY}px)`;
+    rafId = requestAnimationFrame(animate);
+  }
+
+  hero.addEventListener('mousemove', (e: MouseEvent) => {
+    const { left, top, width, height } = hero.getBoundingClientRect();
+    // Normalise to -1 … +1
+    const nx = ((e.clientX - left) / width - 0.5) * 2;
+    const ny = ((e.clientY - top) / height - 0.5) * 2;
+    // Invert so image moves away from cursor (parallax feel)
+    targetX = -nx * STRENGTH;
+    targetY = -ny * STRENGTH;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    targetX = 0;
+    targetY = 0;
+  });
+
+  animate();
+</script>
 
 <style>
   .hero {
@@ -50,12 +92,8 @@ const { image, title, subtitle } = Astro.props;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transform: scale(1.04);
-    animation: heroZoom 12s ease-out forwards;
-  }
-
-  @keyframes heroZoom {
-    to { transform: scale(1); }
+    transform: scale(1.08);
+    will-change: transform;
   }
 
   .hero-overlay {
