@@ -1,6 +1,6 @@
 ---
 title: "Slovenia"
-description: "Automn in Slovenia"
+description: "Autumn in Slovenia"
 cover: ./hero.jpg
 images:
   - ./1.jpg
