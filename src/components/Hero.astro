@@ -1,10 +1,13 @@
 ---
-const { image, title, subtitle } = Astro.props;
+const { image, imageMobile, title, subtitle } = Astro.props;
 ---
 
 <section class="hero">
   <div class="hero-image-wrap">
+    <picture>
+    <source media="(max-width: 768px)" srcset={imageMobile ?? image} />
     <img src={image} alt={title} class="hero-image" id="hero-image" />
+  </picture>
     <div class="hero-overlay"></div>
   </div>
 
