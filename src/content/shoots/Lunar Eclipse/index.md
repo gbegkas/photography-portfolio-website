@@ -1,5 +1,5 @@
 ---
-title: "Blood Moon"
+title: "Lunar Eclipse"
 description: "Blood Moon in early September"
 cover: ./825A3168.jpg
 images:
