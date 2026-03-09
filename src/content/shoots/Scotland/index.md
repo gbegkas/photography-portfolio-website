@@ -10,7 +10,6 @@ images:
   - ./13.jpg
   - ./14.jpg
   - ./15.jpg
-  - ./16.jpg
   - ./17.jpg
   - ./18.jpg
   - ./19.jpg
@@ -27,6 +26,7 @@ images:
   - ./29.jpg
   - ./3.jpg
   - ./30.jpg
+  - ./31.jpg
   - ./4.jpg
   - ./5.jpg
   - ./6.jpg
