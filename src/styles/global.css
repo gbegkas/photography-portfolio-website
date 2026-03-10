@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@100;300;400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,7 +13,8 @@
   --muted: #8a8478;
   --accent: #c8a96e;
   --accent-dark: #9a7a44;
-  --serif: 'Cormorant Garamond', Georgia, serif;
+  --title: 'Playfair Display', 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Cormorant Garamond';
   --sans: 'Josefin Sans', 'Helvetica Neue', sans-serif;
 }
 
