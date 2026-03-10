@@ -16,25 +16,23 @@ import Navbar from "../components/Navbar.astro";
       <div class="about-divider fade-up fade-up-delay-2"></div>
       <div class="about-body fade-up fade-up-delay-2">
         <p>
-          Hi, I’m George, a photographer passionate about capturing moments through light and lens.
-          My work spans landscapes, travel, animals, and events, with each photograph aiming to tell
-          a story and preserve a moment in time.
+          Hi, I'm George — a software engineer by day and photographer by passion. My camera goes wherever life takes
+          me — always looking for the moments that feel too good to let slip by.
         </p>
         <p>
-          Photography began as a creative outlet alongside my main profession in software engineering,
-          but over time it has grown into a meaningful part of how I explore and experience the world.
-          Whether it’s the changing light over a landscape, the character of an animal, or the atmosphere
-          of a live event, I’m drawn to moments that feel natural, authentic, and worth remembering.
+          Photography crept up on me gradually. What started as a creative escape from code and screens slowly became
+          one of the most meaningful ways I engage with the world around me. My background in software engineering — a
+          world of precision and problem-solving — perhaps unsurprisingly shapes how I approach every frame. There's
+          something about the discipline of it — really <em>looking</em> at the light, the composition, the timing — that
+          changes how you move through a place.
         </p>
         <p>
-          Through photography I enjoy slowing down and observing the details that often go unnoticed.
-          Light, composition, and timing are at the core of how I approach every frame.
+          I'm drawn to what's natural and unposed: the way late afternoon light falls across open ground, the
+          personality in an animal's stillness, the energy of a crowd mid-moment. This portfolio gathers work from
+          personal projects and travels — a mix of everyday trips seen through a photographer's eye and journeys planned
+          around the pursuit of a good shot.
         </p>
-        <p>
-          This portfolio is a collection of personal projects and selected work that reflects my
-          journey as a photographer. Alongside these galleries, I also explore specialized projects
-          such as equestrian photography and other creative collaborations.
-        </p>
+
         <!--<p>-->
         <!--  This is your space to connect with the people who find your work.-->
         <!--</p>-->
@@ -77,7 +75,7 @@ import Navbar from "../components/Navbar.astro";
   }
 
   .about-heading {
-    font-family: var(--serif);
+    font-family: var(--garamond);
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 300;
     line-height: 1.1;
@@ -131,7 +129,10 @@ import Navbar from "../components/Navbar.astro";
 
   @media (max-width: 640px) {
     .about-page {
-      padding: 6rem 1.5rem 3rem;
+      padding: 8rem 1.5rem 3rem;
+    }
+    .about-heading {
+      font-size: 2.2rem;
     }
   }
 </style>

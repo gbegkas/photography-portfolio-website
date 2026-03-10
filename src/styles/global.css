@@ -10,10 +10,12 @@
   --ink: #0e0d0b;
   --paper: #f5f2ec;
   --warm-white: #faf8f4;
+  --test-colour: #d6d6d6;
   --muted: #8a8478;
   --accent: #c8a96e;
   --accent-dark: #9a7a44;
   --title: 'Playfair Display', 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --garamond: 'EB Garamond';
   --serif: 'Cormorant Garamond';
   --sans: 'Josefin Sans', 'Helvetica Neue', sans-serif;
 }
