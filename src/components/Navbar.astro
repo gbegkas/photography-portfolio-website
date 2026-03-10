@@ -5,27 +5,83 @@ const currentPath = Astro.url.pathname;
 
 <nav class:list={["site-nav", { "nav--transparent": transparent }]}>
   <a href="/" class="nav-logo">
-    <span class="logo-text">George Begkas | Light & Lens</span>
+    <span class="logo-text">George Begkas | <br class="logo-break" /> Light & Lens</span>
   </a>
 
+  <!-- Desktop links -->
   <ul class="nav-links">
     <li>
-      <a href="/" class:list={["nav-link", { active: currentPath === "/" }]}>
-        Work
-      </a>
+      <a href="/" class:list={["nav-link", { active: currentPath === "/" }]}>Work</a>
     </li>
     <li>
-      <a href="/about" class:list={["nav-link", { active: currentPath === "/about" }]}>
-        About
-      </a>
+      <a href="/about" class:list={["nav-link", { active: currentPath === "/about" }]}>About</a>
     </li>
     <li>
-      <a href="https://www.instagram.com/george_begk/" target="_blank" rel="noopener" class="nav-link">
-        Instagram ↗
-      </a>
+      <a href="https://www.instagram.com/george_begk/" target="_blank" rel="noopener" class="nav-link">Instagram ↗</a>
     </li>
   </ul>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+  <div class="mobile-menu-panel">
+    <ul class="mobile-links">
+      <li>
+        <a href="/" class:list={["mobile-link", { active: currentPath === "/" }]}>Work</a>
+      </li>
+      <li>
+        <a href="/about" class:list={["mobile-link", { active: currentPath === "/about" }]}>About</a>
+      </li>
+      <li>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="mobile-link">Instagram ↗</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('mobile-menu-backdrop');
+
+  function open() {
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.classList.add('is-open');
+    menu.classList.add('is-open');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.classList.remove('is-open');
+    menu.classList.remove('is-open');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.contains('is-open') ? close() : open();
+  });
+
+  backdrop.addEventListener('click', close);
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', close);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+</script>
 
 <style>
   .site-nav {
@@ -54,8 +110,10 @@ const currentPath = Astro.url.pathname;
     color: var(--paper);
     text-transform: uppercase;
     font-style: italic;
+    //white-space: nowrap;
   }
 
+  /* Desktop links */
   .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -94,21 +152,127 @@ const currentPath = Astro.url.pathname;
     width: 100%;
   }
 
+  /* Hamburger — hidden on desktop */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--paper);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  /* Animate to X when open */
+  .hamburger.is-open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .hamburger.is-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .hamburger.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    pointer-events: none;
+  }
+
+  .mobile-menu.is-open {
+    pointer-events: auto;
+  }
+
+  .mobile-menu-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 13, 11, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu.is-open .mobile-menu-backdrop {
+    opacity: 1;
+  }
+
+  .mobile-menu-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(75vw, 300px);
+    height: 100%;
+    background: rgba(14, 13, 11, 0.97);
+    border-left: 1px solid rgba(245, 242, 236, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .mobile-menu.is-open .mobile-menu-panel {
+    transform: translateX(0);
+  }
+
+  .mobile-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .mobile-link {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(245, 242, 236, 0.5);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    display: block;
+  }
+
+  .mobile-link:hover,
+  .mobile-link.active {
+    color: var(--paper);
+  }
+
+  .logo-break {
+    display: none;
+  }
+
+  /* Responsive */
   @media (max-width: 640px) {
+    .logo-break {
+      display: block;
+    }
     .site-nav {
       padding: 1.25rem 1.5rem;
     }
-    .nav-logo {
-      font-size: 1.5rem;
-      letter-spacing: 0.06em;
-    }
     .nav-links {
-      gap: 1.25rem;
-      white-space: nowrap;
+      display: none;
     }
-    .nav-link {
-      font-size: 0.58rem;
-      letter-spacing: 0.15em;
+    .hamburger {
+      display: flex;
     }
   }
 </style>
