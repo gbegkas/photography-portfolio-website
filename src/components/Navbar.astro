@@ -1,6 +1,12 @@
 ---
 const { transparent = false } = Astro.props;
 const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: "/", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "https://instagram.com/george_begk", label: "Instagram ↗", external: true },
+];
 ---
 
 <nav class:list={["site-nav", { "nav--transparent": transparent }]}>
@@ -10,15 +16,18 @@ const currentPath = Astro.url.pathname;
 
   <!-- Desktop links -->
   <ul class="nav-links">
-    <li>
-      <a href="/" class:list={["nav-link", { active: currentPath === "/" }]}>Work</a>
-    </li>
-    <li>
-      <a href="/about" class:list={["nav-link", { active: currentPath === "/about" }]}>About</a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/george_begk/" target="_blank" rel="noopener" class="nav-link">Instagram ↗</a>
-    </li>
+    {navLinks.map((link) => (
+      <li>
+        <a
+          href={link.href}
+          class:list={["nav-link", { active: currentPath === link.href }]}
+          target={link.external ? "_blank" : undefined}
+          rel={link.external ? "noopener" : undefined}
+        >
+          {link.label}
+        </a>
+      </li>
+    ))}
   </ul>
 
   <!-- Hamburger button (mobile only) -->
@@ -34,15 +43,18 @@ const currentPath = Astro.url.pathname;
   <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
   <div class="mobile-menu-panel">
     <ul class="mobile-links">
-      <li>
-        <a href="/" class:list={["mobile-link", { active: currentPath === "/" }]}>Work</a>
-      </li>
-      <li>
-        <a href="/about" class:list={["mobile-link", { active: currentPath === "/about" }]}>About</a>
-      </li>
-      <li>
-        <a href="https://instagram.com" target="_blank" rel="noopener" class="mobile-link">Instagram ↗</a>
-      </li>
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={["mobile-link", { active: currentPath === link.href }]}
+            target={link.external ? "_blank" : undefined}
+            rel={link.external ? "noopener" : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
 </div>
@@ -110,7 +122,7 @@ const currentPath = Astro.url.pathname;
     color: var(--paper);
     text-transform: uppercase;
     font-style: italic;
-    //white-space: nowrap;
+    white-space: nowrap;
   }
 
   /* Desktop links */
@@ -255,8 +267,7 @@ const currentPath = Astro.url.pathname;
   .mobile-link.active {
     color: var(--paper);
   }
-
-  .logo-break {
+.logo-break {
     display: none;
   }
 
