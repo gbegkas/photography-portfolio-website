@@ -1,0 +1,279 @@
+---
+import Layout from "../../../components/Layout.astro";
+import Navbar from "../../../components/Navbar.astro";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const shoots = await getCollection("equestrian");
+  return shoots.map((shoot) => ({
+    params: { slug: shoot.slug },
+    props: { shoot },
+  }));
+}
+
+const { shoot } = Astro.props as { shoot: CollectionEntry<'equestrian'> };
+const coverSrc = shoot.data.cover.src;
+const allSlides = shoot.data.images.map((img) => img.src);
+---
+
+<Layout title={`${shoot.data.title} — Galloping Hooves`}>
+  <Navbar logoLine1="Galloping Hooves" logoLine2="" instagramUrl="https://www.instagram.com/gallopinghoovesphotos"/>
+
+  <div class="shoot-page">
+    <!-- Hero -->
+    <div class="shoot-hero">
+      <Image src={shoot.data.cover} alt={shoot.data.title} class="shoot-hero-img" />
+      <div class="shoot-hero-overlay"></div>
+      <div class="shoot-hero-content">
+        <a href="/projects/equestrian" class="back-link">← All Work</a>
+        <h1 class="shoot-title">{shoot.data.title}</h1>
+        {shoot.data.description && (
+          <p class="shoot-desc">{shoot.data.description}</p>
+        )}
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery-wrap">
+      {shoot.data.images.length > 0 ? (
+        <div class="masonry">
+          {shoot.data.images.map((img, i) => (
+            <div class="masonry-item" style={`animation-delay: ${0.3 + i * 0.07}s`} data-index={i}>
+              <Image
+                src={img}
+                alt={`${shoot.data.title} — ${i + 1}`}
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="img-overlay">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p class="no-images">No images found for this shoot.</p>
+      )}
+    </div>
+
+    <footer class="shoot-footer">
+      <a href="/projects/equestrian" class="footer-back">← Back to all work</a>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lb-backdrop"></div>
+    <button class="lb-close" id="lb-close" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Next">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+    <div class="lb-img-wrap">
+      <img src="" alt="" class="lb-img" id="lb-img" />
+    </div>
+    <div class="lb-counter" id="lb-counter">1 / 1</div>
+  </div>
+</Layout>
+
+<script define:vars={{ allSlides }}>
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCounter = document.getElementById('lb-counter');
+  const lbClose = document.getElementById('lb-close');
+  const lbPrev = document.getElementById('lb-prev');
+  const lbNext = document.getElementById('lb-next');
+  const lbBackdrop = document.getElementById('lb-backdrop');
+  let current = 0;
+  const total = allSlides.length;
+
+  function open(index) {
+    current = index;
+    show();
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    setTimeout(() => { lbImg.src = ''; }, 300);
+  }
+  function show() {
+    lbImg.classList.remove('lb-img--visible');
+    lbImg.src = allSlides[current];
+    lbImg.onload = () => lbImg.classList.add('lb-img--visible');
+    lbCounter.textContent = `${current + 1} / ${total}`;
+    lbPrev.style.opacity = current === 0 ? '0.25' : '1';
+    lbNext.style.opacity = current === total - 1 ? '0.25' : '1';
+  }
+  function prev() { if (current > 0) { current--; show(); } }
+  function next() { if (current < total - 1) { current++; show(); } }
+
+  document.querySelectorAll('.masonry-item').forEach((item) => {
+    item.addEventListener('click', () => open(parseInt(item.dataset.index)));
+  });
+  lbClose.addEventListener('click', close);
+  lbBackdrop.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+  let touchStartX = 0;
+  lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  lightbox.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+  });
+</script>
+
+<style>
+  .shoot-page { min-height: 100vh; }
+
+  .shoot-hero {
+    position: relative; height: 55vh; min-height: 400px; overflow: hidden;
+  }
+  .shoot-hero-img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    filter: sepia(20%) contrast(1.05);
+  }
+  .shoot-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(20,12,5,0.4) 0%, rgba(20,12,5,0.8) 100%);
+  }
+  .shoot-hero-content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 3rem; max-width: 1280px; margin: 0 auto; left: 0; right: 0;
+  }
+  .back-link {
+    position: absolute; top: 7rem; left: 3rem;
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(240,225,200,0.5); transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--eq-gold); }
+  .shoot-title {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 300; letter-spacing: 0.04em; color: var(--eq-cream); line-height: 1;
+    animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  .shoot-desc {
+    font-family: var(--serif); font-style: italic; font-size: 1.1rem;
+    color: rgba(240,225,200,0.6); margin-top: 0.6rem;
+    animation: fadeUp 0.8s 0.15s cubic-bezier(0.22,1,0.36,1) both;
+  }
+
+  .gallery-wrap { padding: 4rem 3rem 3rem; max-width: 1280px; margin: 0 auto; }
+  .masonry { columns: 2; column-gap: 1.25rem; }
+  @media (min-width: 768px) { .masonry { columns: 3; } }
+
+  .masonry-item {
+    break-inside: avoid; margin-bottom: 1.25rem;
+    overflow: hidden; position: relative; cursor: pointer;
+    opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
+    background: #1a1510;
+  }
+  .gallery-img {
+    width: 100%; height: auto; display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    filter: sepia(15%) contrast(1.05);
+  }
+  .img-overlay {
+    position: absolute; inset: 0;
+    background: rgba(20,12,5,0.4);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s; color: var(--eq-cream);
+  }
+  .masonry-item:hover .gallery-img { transform: scale(1.04); }
+  .masonry-item:hover .img-overlay { opacity: 1; }
+
+  .no-images {
+    font-family: var(--serif); font-style: italic;
+    color: rgba(240,225,200,0.4); text-align: center; padding: 4rem 0;
+  }
+
+  .shoot-footer {
+    padding: 2rem 3rem 4rem; max-width: 1280px; margin: 0 auto;
+    border-top: 1px solid rgba(240,225,200,0.06);
+  }
+  .footer-back {
+    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(240,225,200,0.35); transition: color 0.2s;
+  }
+  .footer-back:hover { color: var(--eq-gold); }
+
+  /* Lightbox */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+  }
+  .lightbox.is-open { opacity: 1; pointer-events: auto; }
+  .lightbox-backdrop {
+    position: absolute; inset: 0;
+    background: rgba(10, 7, 4, 0.97); backdrop-filter: blur(6px);
+  }
+  .lb-img-wrap {
+    position: relative; z-index: 2;
+    width: 90vw; height: 88vh; max-width: 1600px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lb-img {
+    width: 100%; height: 100%; object-fit: contain;
+    opacity: 0; transition: opacity 0.25s ease;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+  }
+  .lb-img--visible { opacity: 1; }
+  .lb-close {
+    position: absolute; top: 1.5rem; right: 1.5rem; z-index: 3;
+    background: rgba(240,225,200,0.08); border: 1px solid rgba(240,225,200,0.12);
+    color: var(--eq-cream); width: 44px; height: 44px; border-radius: 50%;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+  .lb-close:hover { background: var(--eq-gold); color: #1a1510; border-color: var(--eq-gold); }
+  .lb-nav {
+    position: absolute; z-index: 3; top: 50%; transform: translateY(-50%);
+    background: rgba(240,225,200,0.08); border: 1px solid rgba(240,225,200,0.12);
+    color: var(--eq-cream); width: 52px; height: 52px; border-radius: 50%;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s, opacity 0.2s;
+  }
+  .lb-nav:hover { background: var(--eq-gold); color: #1a1510; border-color: var(--eq-gold); }
+  .lb-prev { left: 1.5rem; }
+  .lb-next { right: 1.5rem; }
+  .lb-counter {
+    position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+    z-index: 3; font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(240,225,200,0.35);
+  }
+
+  @media (max-width: 640px) {
+    .gallery-wrap { padding: 2rem 1.25rem; }
+    .shoot-hero-content { padding: 1.5rem; }
+    .back-link { left: 1.5rem; top: 6rem; }
+    .lb-prev { left: 0.75rem; }
+    .lb-next { right: 0.75rem; }
+    .lb-nav { width: 42px; height: 42px; }
+  }
+</style>
