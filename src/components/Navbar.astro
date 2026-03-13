@@ -1,5 +1,5 @@
 ---
-const { transparent = false, logoLine1 = "George Begkas | ", logoLine2 = "Light & Lens", instagramUrl = "https://instagram.com/george_begk"} = Astro.props;
+const { transparent = false, logoHref = "/", logoLine1 = "George Begkas | ", logoLine2 = "Light & Lens", instagramUrl = "https://instagram.com/george_begk"} = Astro.props;
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
@@ -8,7 +8,7 @@ const navLinks = [
   {
     label: "Projects",
     dropdown: [
-      { href: "/projects/equestrian", label: "Galloping Hooves" },
+      { href: "/projects/galloping_hooves", label: "Galloping Hooves" },
     ],
   },
   { href: instagramUrl, label: "Instagram ↗", external: true },
@@ -17,7 +17,7 @@ const navLinks = [
 ---
 
 <nav class:list={["site-nav", { "nav--transparent": transparent }]}>
-  <a href="/" class="nav-logo">
+  <a href={logoHref} class="nav-logo">
     <span class="logo-text">{logoLine1}<br class="logo-break" />{logoLine2}</span>
   </a>
 

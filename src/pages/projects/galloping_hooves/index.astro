@@ -9,7 +9,7 @@ const shoots = (await getCollection("equestrian"))
 ---
 
 <Layout title="Galloping Hooves">
-  <Navbar logoLine1="Galloping Hooves" logoLine2="" instagramUrl="https://www.instagram.com/gallopinghoovesphotos"/>
+  <Navbar logoLine1="Galloping Hooves" logoLine2="" instagramUrl="https://www.instagram.com/gallopinghoovesphotos" logoHref="/projects/galloping_hooves"/>
 
   <!-- Hero -->
   <section class="eq-hero">
@@ -45,7 +45,7 @@ const shoots = (await getCollection("equestrian"))
       <div class="eq-masonry">
         {shoots.map((shoot, i) => (
           <a
-            href={`/projects/equestrian/${shoot.slug}`}
+            href={`/projects/galloping_hooves/${shoot.slug}`}
             class="eq-card"
             style={`animation-delay: ${0.3 + i * 0.12}s`}
           >
