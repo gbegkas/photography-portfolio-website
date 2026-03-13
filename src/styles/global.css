@@ -14,8 +14,8 @@
   --accent: #c8a96e;
   --accent-dark: #9a7a44;
   --title: 'Playfair Display', 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
-  --garamond: 'EB Garamond';
-  --serif: 'Cormorant Garamond';
+  --garamond: 'EB Garamond', 'Cormorant Garamond', serif;
+  --serif: 'Cormorant Garamond', serif;
   --sans: 'Josefin Sans', 'Helvetica Neue', sans-serif;
 
   /* Equestrian brand */
