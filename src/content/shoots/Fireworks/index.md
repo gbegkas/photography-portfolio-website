@@ -1,6 +1,7 @@
 ---
 title: "Xanthi Carnival Fireworks"
 description: "Xanthi Carnival 2026 closing fireworks"
+date: 2026-02-22
 cover: ./cover.jpg
 images:
   - ./1.jpg

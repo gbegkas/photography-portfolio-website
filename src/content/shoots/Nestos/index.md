@@ -1,6 +1,7 @@
 ---
 title: "Nestos"
 description: "Nestos river in late Spring"
+date: 2025-05-19
 cover: ./825A1573.jpg
 images:
   - ./825A1550.jpg

@@ -6,6 +6,7 @@ const shootSchema = ({ image }: any) => z.object({
   cover: image(),
   order: z.number().default(0),
   images: z.array(image()),
+  date: z.coerce.date(),
 });
 
 const shoots = defineCollection({ schema: shootSchema });

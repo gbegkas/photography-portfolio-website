@@ -1,6 +1,7 @@
 ---
 title: "View from above"
 description: ""
+date: 2025-08-10
 cover: ./825A2161.jpg
 images:
   - ./825A1882.jpg

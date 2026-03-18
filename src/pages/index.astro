@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import { getCollection } from "astro:content";
 
-const shoots = await getCollection("shoots");
+const shoots = (await getCollection("shoots")).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 shoots.forEach(s => console.log(s.slug, s.data.cover));
 ---
 

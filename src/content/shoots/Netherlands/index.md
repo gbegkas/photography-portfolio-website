@@ -2,6 +2,7 @@
 title: "Netherlands"
 description: ""
 cover: ./825A2111.jpg
+date: 2025-06-25
 images:
   - ./825A0872.jpg
   - ./825A0923.jpg

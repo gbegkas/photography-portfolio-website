@@ -1,6 +1,7 @@
 ---
 title: "Surrey & Portsmouth"
 description: ""
+date: 2025-06-20
 cover: ./825A6415-2.jpg
 images:
   - ./825A0823.jpg

@@ -1,6 +1,7 @@
 ---
 title: "Iberian Wildlife"
 description: "Hide photography in Spain"
+date: 2025-12-05
 cover: ./825A2877.jpg
 images:
   - ./825A0208.jpg

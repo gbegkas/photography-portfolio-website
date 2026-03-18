@@ -1,6 +1,7 @@
 ---
 title: "Scotland"
 description: "Spring in Scotland"
+date: 2025-03-30
 cover: ./hero.jpg
 images:
   - ./1.jpg

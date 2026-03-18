@@ -1,6 +1,7 @@
 ---
 title: "Slovenia"
 description: "Autumn in Slovenia"
+date: 2024-10-20
 cover: ./hero.jpg
 images:
   - ./1.jpg

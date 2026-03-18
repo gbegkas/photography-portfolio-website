@@ -1,6 +1,7 @@
 ---
 title: "Abandonment"
 description: "Abandoned facilities near Xanthi"
+date: 2025-05-12
 cover: ./cover.jpg
 images:
   - ./1.jpg

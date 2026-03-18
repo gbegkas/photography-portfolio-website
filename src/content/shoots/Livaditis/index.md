@@ -1,6 +1,7 @@
 ---
 title: "Livaditis"
 description: "Autumn vibes at Livaditis waterfall"
+date: 2025-11-03
 cover: ./825A9505.jpg
 images:
   - ./825A9388.jpg
