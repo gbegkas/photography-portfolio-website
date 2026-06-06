@@ -3,6 +3,7 @@ title: "Horses"
 description: "Stills from various tournaments"
 cover: ./cover.jpg
 order: 1
+date: '2024-12-01'
 images:
   - ./cover.jpg
   - ./1.jpg
