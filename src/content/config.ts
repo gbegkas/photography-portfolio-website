@@ -7,6 +7,7 @@ const shootSchema = ({ image }: any) => z.object({
   order: z.number().default(0),
   images: z.array(image()),
   date: z.coerce.date(),
+  instagramUrls: z.array(z.string().url()).optional(),
 });
 
 const shoots = defineCollection({ schema: shootSchema });
