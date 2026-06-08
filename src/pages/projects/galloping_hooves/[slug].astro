@@ -39,13 +39,6 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
     <div class="gallery-wrap">
       {shoot.data.images.length > 0 ? (
         <div class={hasBody ? "gallery-with-prose" : ""}>
-          {hasBody && (
-            <aside class="shoot-prose">
-              <div class="shoot-prose-inner">
-                <Content />
-              </div>
-            </aside>
-          )}
           <div class="masonry">
             {shoot.data.images.map((img, i) => (
               <div class="masonry-item" style={`animation-delay: ${0.3 + i * 0.07}s`} data-index={i}>
@@ -63,6 +56,13 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
               </div>
             ))}
           </div>
+          {hasBody && (
+            <aside class="shoot-prose">
+              <div class="shoot-prose-inner">
+                <Content />
+              </div>
+            </aside>
+          )}
         </div>
       ) : (
         <p class="no-images">No images found for this shoot.</p>
