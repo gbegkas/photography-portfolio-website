@@ -3,6 +3,7 @@ import Layout from "../../components/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const shoots = await getCollection("shoots");
@@ -12,9 +13,9 @@ export async function getStaticPaths() {
   }));
 }
 
-const { shoot } = Astro.props;
+const { shoot } = Astro.props as { shoot: CollectionEntry<"shoots"> };
 
-const allSlides = shoot.data.images.map((img) => img.src);
+
 ---
 
 <Layout title={`${shoot.data.title} — Lens & Light`}>
@@ -96,69 +97,76 @@ const allSlides = shoot.data.images.map((img) => img.src);
   </div>
 </Layout>
 
-<script define:vars={{ allSlides }}>
-  const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lb-img');
-  const lbCounter = document.getElementById('lb-counter');
-  const lbClose = document.getElementById('lb-close');
-  const lbPrev = document.getElementById('lb-prev');
-  const lbNext = document.getElementById('lb-next');
-  const lbBackdrop = document.getElementById('lb-backdrop');
+<script>
+  const lightbox = document.getElementById('lightbox') as HTMLElement;
+  const lbImg = document.getElementById('lb-img') as HTMLImageElement;
+  const lbCounter = document.getElementById('lb-counter') as HTMLElement;
+  const lbClose = document.getElementById('lb-close') as HTMLElement;
+  const lbPrev = document.getElementById('lb-prev') as HTMLElement;
+  const lbNext = document.getElementById('lb-next') as HTMLElement;
+  const lbBackdrop = document.getElementById('lb-backdrop') as HTMLElement;
 
-  let current = 0;
-  const total = allSlides.length;
+  if (!lightbox || !lbImg || !lbCounter || !lbClose || !lbPrev || !lbNext || !lbBackdrop) {
+    console.error('Lightbox: one or more required elements not found');
+  } else {
+    // Read srcs from the already-rendered <Image> elements so we get WebP URLs
+    const allSlides = Array.from(document.querySelectorAll<HTMLImageElement>('.gallery-img')).map(img => img.src);
 
-  function open(index) {
-    current = index;
-    show();
-    lightbox.setAttribute('aria-hidden', 'false');
-    lightbox.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-  }
+    let current = 0;
+    const total = allSlides.length;
 
-  function close() {
-    lightbox.classList.remove('is-open');
-    lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    setTimeout(() => { lbImg.src = ''; }, 300);
-  }
+    function open(index: number) {
+      current = index;
+      show();
+      lightbox.setAttribute('aria-hidden', 'false');
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
 
-  function show() {
-    lbImg.classList.remove('lb-img--visible');
-    lbImg.src = allSlides[current];
-    lbImg.onload = () => lbImg.classList.add('lb-img--visible');
-    lbCounter.textContent = `${current + 1} / ${total}`;
-    lbPrev.style.opacity = current === 0 ? '0.25' : '1';
-    lbNext.style.opacity = current === total - 1 ? '0.25' : '1';
-  }
+    function close() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      setTimeout(() => { lbImg.src = ''; }, 300);
+    }
 
-  function prev() { if (current > 0) { current--; show(); } }
-  function next() { if (current < total - 1) { current++; show(); } }
+    function show() {
+      lbImg.classList.remove('lb-img--visible');
+      lbImg.src = allSlides[current];
+      lbImg.onload = () => lbImg.classList.add('lb-img--visible');
+      lbCounter.textContent = `${current + 1} / ${total}`;
+      lbPrev.style.opacity = current === 0 ? '0.25' : '1';
+      lbNext.style.opacity = current === total - 1 ? '0.25' : '1';
+    }
 
-  document.querySelectorAll('.masonry-item').forEach((item) => {
-    item.addEventListener('click', () => {
-      open(parseInt(item.dataset.index));
+    function prev() { if (current > 0) { current--; show(); } }
+    function next() { if (current < total - 1) { current++; show(); } }
+
+    document.querySelectorAll<HTMLElement>('.masonry-item').forEach((item) => {
+      item.addEventListener('click', () => {
+        open(parseInt(item.dataset.index ?? '0'));
+      });
     });
-  });
 
-  lbClose.addEventListener('click', close);
-  lbBackdrop.addEventListener('click', close);
-  lbPrev.addEventListener('click', prev);
-  lbNext.addEventListener('click', next);
+    lbClose.addEventListener('click', close);
+    lbBackdrop.addEventListener('click', close);
+    lbPrev.addEventListener('click', prev);
+    lbNext.addEventListener('click', next);
 
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('is-open')) return;
-    if (e.key === 'Escape') close();
-    if (e.key === 'ArrowLeft') prev();
-    if (e.key === 'ArrowRight') next();
-  });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
 
-  let touchStartX = 0;
-  lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
-  lightbox.addEventListener('touchend', (e) => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
-  });
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', (e) => { touchStartX = (e as TouchEvent).touches[0].clientX; });
+    lightbox.addEventListener('touchend', (e) => {
+      const dx = (e as TouchEvent).changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+    });
+  }
 </script>
 
 <style>

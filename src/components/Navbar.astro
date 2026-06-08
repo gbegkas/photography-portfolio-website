@@ -128,19 +128,18 @@ const navLinks = [
 
   hamburger.addEventListener('click', () => menu.classList.contains('is-open') ? closeMenu() : openMenu());
   backdrop.addEventListener('click', closeMenu);
-  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMenu));
+  document.querySelectorAll<HTMLElement>('.mobile-link').forEach(l => l.addEventListener('click', closeMenu));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
   // ── Desktop dropdown ───────────────────────────────────────────────────────
-  document.querySelectorAll('.nav-dropdown-toggle').forEach((btn) => {
+  document.querySelectorAll<HTMLElement>('.nav-dropdown-toggle').forEach((btn) => {
     const item = btn.closest('.nav-item') as HTMLElement;
-    const dropdownMenu = item.querySelector('.dropdown-menu');
 
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const isOpen = item.classList.contains('dropdown-open');
       // Close all dropdowns first
-      document.querySelectorAll('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
+      document.querySelectorAll<HTMLElement>('.nav-item.dropdown-open').forEach(el => el.classList.remove('dropdown-open'));
       if (!isOpen) {
         item.classList.add('dropdown-open');
         btn.setAttribute('aria-expanded', 'true');
@@ -152,7 +151,7 @@ const navLinks = [
 
   // Close dropdown when clicking outside
   document.addEventListener('click', () => {
-    document.querySelectorAll('.nav-item.dropdown-open').forEach(el => {
+    document.querySelectorAll<HTMLElement>('.nav-item.dropdown-open').forEach(el => {
       el.classList.remove('dropdown-open');
       el.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
     });
