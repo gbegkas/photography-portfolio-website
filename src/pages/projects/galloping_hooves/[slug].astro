@@ -4,7 +4,6 @@ import Navbar from "../../../components/Navbar.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { url } from "../../../utils/url";
-import gallopingCover from "../../../assets/galloping_cover.jpg";
 
 const shoots = (await getCollection("equestrian"))
   .sort((a, b) => a.data.order - b.data.order);
@@ -16,7 +15,7 @@ const shoots = (await getCollection("equestrian"))
   <!-- Hero -->
   <section class="eq-hero">
     <div class="eq-hero-bg">
-      <Image src={gallopingCover} alt="Galloping Hooves" class="eq-hero-img" id="eq-hero-image" />
+      <img src="/galloping_cover.jpg" alt="Galloping Hooves" class="eq-hero-img" id="eq-hero-image" />
     </div>
     <div class="eq-hero-overlay"></div>
     <div class="eq-hero-content">
