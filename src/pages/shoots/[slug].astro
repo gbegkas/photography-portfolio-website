@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
-import { url } from "../../utils/url";
+const url = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
 
 export async function getStaticPaths() {
   const shoots = await getCollection("shoots");
