@@ -47,39 +47,42 @@ images:
 
 
 In late November 2025, I visited Spain for the first time. It was also my first experience with wildlife photography 
-from a hide. I was part of a five-person group that included a professional wildlife photographer, and our main goal was 
+in a hide. I was part of a five-person group which included a professional wildlife photographer, and our main goal was 
 to photograph the Iberian Lynx as well as the area's diverse birdlife.
 
 From the very beginning, I was confronted with one of the fundamental truths of wildlife photography: there are no 
 guarantees. We spent two full days, from dawn until dusk, in a hide in southeastern Spain near the border of Castilla-La
 Mancha and Andalusia, where the Iberian Lynx can be found.
 
-Hide photography is not for everyone. Spending eight or nine hours in silence can be challenging, and the hardest part 
-is often the waiting. As someone who doesn't talk much, I found the quiet easy to handle, though there were moments when
-patience was tested.
-
-Our only lynx sighting came during the early hours of the first day. The morning was still wrapped in mist, and the sun 
-had yet to rise. The encounter lasted only a couple of minutes—though it felt like mere seconds. The animal emerged from
-the left, crossed our field of view at an unhurried pace, and disappeared back into the trees and undergrowth without 
-so much as a pause.
+Our only lynx sighting came during the early hours of the first day, before we had fully settled into the hide. In the 
+dim, misty light before sunrise, the animal emerged from the left and crossed our field of view at an unhurried pace, 
+but the encounter lasted only a few seconds before it disappeared back into the trees and undergrowth without so much as
+a pause.
 
 The low light and misty conditions made focusing difficult. My camera often locked onto the grass rather than the lynx 
 itself. At first, the few images I managed to capture seemed disappointing, but careful post-processing later allowed 
-me to salvage some worthwhile photographs.
+me to salvage some worthwhile photographs. I have intentionally left one image in this gallery in its initial version so 
+you can see how it actually looked. 
 
 Although the lynx never returned, the rest of our time in the hide provided countless opportunities to observe and 
-photograph the area's rich birdlife.
+photograph the area's rich birdlife. Our luck was even worse on the second day as it was windy with some light rain at 
+times and most of the wildlife was hidden.
 
-On the third day, we visited a hide west of Madrid in hopes of photographing the Spanish Imperial Eagle. Once again, 
+On the third day, we moved to a hide west of Madrid in hopes of photographing the Spanish Imperial Eagle. Once again, 
 luck was not entirely on our side. The eagle's only appearance occurred early in the morning while the air was still 
-cold and humid. To make matters worse, the hide's glass had fogged up from our body heat, making photography even more
-challenging. Despite that, the day itself was fantastic.
+cold and humid. To make matters worse, the hide's glass had fogged up from our body heat and breath, making photography 
+even more challenging. In fact, I only realised I had captured the eagle several days later while reviewing my 
+photographs at home. Despite that, the day itself was fantastic.
 
-Magpies, ravens, red foxes, red kites, and, of course, the Spanish Imperial Eagle were among the many species I had the
-opportunity to observe and photograph. However, the most unforgettable moment came when a group of roughly 30 to 40 
-Black and Egyptian vultures descended simultaneously in front of the hide to clean up the remains left behind by the 
-other wildlife. Witnessing so many large scavengers gathering at once was an incredible spectacle and one of the 
-highlights of the entire trip.
+Magpies, ravens, red foxes, red kites, and, of course, the Spanish Imperial Eagle were among the many species I had the 
+opportunity to observe and photograph. Yet the most unforgettable moment came when roughly 30 to 40 Black and Egyptian 
+vultures suddenly descended from behind the hide and gathered in front of us to clean up the remains left by the other 
+wildlife. The scene unfolded in seconds and was unlike anything I had witnessed before, making it one of the highlights 
+of the entire trip.
+
+Hide photography is not for everyone. Spending eight or nine hours in silence can be challenging, and the hardest part 
+is often the waiting. As someone who cherishes silence, I found the quiet easy to handle, though there were moments when
+patience was tested.
 
 Overall, it was a fantastic experience, and I can't wait for the opportunity to visit similar hides elsewhere in the 
 future.
