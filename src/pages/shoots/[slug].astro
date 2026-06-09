@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { url } from "../../utils/url";
 
 export async function getStaticPaths() {
   const shoots = await getCollection("shoots");
@@ -29,7 +30,7 @@ const featured = new Set(shoot.data.featuredImages ?? []);
       <Image src={shoot.data.cover} alt={shoot.data.title} class="shoot-hero-img" />
       <div class="shoot-hero-overlay"></div>
       <div class="shoot-hero-content">
-        <a href="/" class="back-link">← All Work</a>
+        <a href={url('/')} class="back-link">← All Work</a>
         <h1 class="shoot-title">{shoot.data.title}</h1>
         {shoot.data.description && (
           <p class="shoot-desc">{shoot.data.description}</p>

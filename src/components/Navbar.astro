@@ -1,14 +1,15 @@
 ---
-const { transparent = false, logoHref = "/", logoLine1 = "George Begkas | ", logoLine2 = "Light & Lens", instagramUrl = "https://instagram.com/george_begk"} = Astro.props;
+import { url } from '../utils/url';
+const { transparent = false, logoHref = url('/'), logoLine1 = "George Begkas | ", logoLine2 = "Light & Lens", instagramUrl = "https://instagram.com/george_begk"} = Astro.props;
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
-  { href: "/", label: "Portfolio" },
-  { href: "/about", label: "About" },
+  { href: url('/'), label: "Portfolio" },
+  { href: url('/about'), label: "About" },
   {
     label: "Projects",
     dropdown: [
-      { href: "/projects/galloping_hooves", label: "Galloping Hooves" },
+      { href: url('/projects/galloping_hooves'), label: "Galloping Hooves" },
     ],
   },
   { href: instagramUrl, label: "Instagram ↗", external: true },

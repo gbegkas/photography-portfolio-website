@@ -4,8 +4,9 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import heroImg from "../../public/hero.jpg";
-import heroMobileImg from "../../public/hero-mobile.jpg";
+import { url } from "../utils/url";
+import heroImg from "../assets/hero.jpg";
+import heroMobileImg from "../assets/hero-mobile.jpg";
 
 const shoots = (await getCollection("shoots")).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 shoots.forEach(s => console.log(s.slug, s.data.cover));
@@ -29,7 +30,7 @@ shoots.forEach(s => console.log(s.slug, s.data.cover));
 
     <div class="albums-grid">
       {shoots.map((shoot, i) => (
-        <a href={`/shoots/${shoot.slug}`} class="album-card" style={`animation-delay: ${i * 0.12}s`}>
+        <a href={url(`/shoots/${shoot.slug}`)} class="album-card" style={`animation-delay: ${i * 0.12}s`}>
           <div class="album-image-wrap">
             <Image
               src={shoot.data.cover}
