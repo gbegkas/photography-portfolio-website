@@ -17,6 +17,15 @@ export async function getStaticPaths() {
 const { shoot } = Astro.props as { shoot: CollectionEntry<'equestrian'> };
 const { Content } = await shoot.render();
 const hasBody = (shoot.body ?? '').trim().length > 0;
+
+const ROW_UNIT = 10;
+const GAP = 12;
+const COL_WIDTH = 380;
+
+function rowSpan(img: typeof shoot.data.images[number]) {
+  const h = Math.round((COL_WIDTH * img.height) / img.width);
+  return Math.ceil((h + GAP) / (ROW_UNIT + GAP));
+}
 ---
 
 <Layout title={`${shoot.data.title} — Galloping Hooves`}>
@@ -42,12 +51,19 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
         <div class={hasBody ? "gallery-with-prose" : ""}>
           <div class="masonry">
             {shoot.data.images.map((img, i) => (
-              <div class="masonry-item" style={`animation-delay: ${0.3 + i * 0.07}s`} data-index={i}>
+              <div
+                class="masonry-item"
+                style={`animation-delay: ${0.3 + i * 0.07}s; --span: ${rowSpan(img)}`}
+                data-index={i}
+              >
                 <Image
                   src={img}
                   alt={`${shoot.data.title} — ${i + 1}`}
                   class="gallery-img"
-                  loading="lazy"
+                  width={img.width}
+                  height={img.height}
+                  loading={i < 9 ? "eager" : "lazy"}
+                  fetchpriority={i < 9 ? "high" : "low"}
                 />
                 <div class="img-overlay">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -235,18 +251,27 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
   .prose-tile strong { font-weight: 400; color: var(--eq-cream); }
   .prose-tile em     { color: rgba(240,225,200,0.4); }
 
-  .gallery-wrap { padding: 4rem 3rem 3rem; max-width: 1280px; margin: 0 auto; }
-  .masonry { columns: 2; column-gap: 1.25rem; }
-  @media (min-width: 768px) { .masonry { columns: 3; } }
+  .gallery-wrap { padding: clamp(2rem, 4vw, 5rem) clamp(1.5rem, 4vw, 4rem) 3rem; max-width: 1600px; margin: 0 auto; }
+
+  .masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 10px;
+    gap: 12px;
+  }
+
+  @media (max-width: 767px) {
+    .masonry { grid-template-columns: repeat(2, 1fr); }
+  }
 
   .masonry-item {
-    break-inside: avoid; margin-bottom: 1.25rem;
+    grid-row: span var(--span);
     overflow: hidden; position: relative; cursor: pointer;
     opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
     background: #1a1510;
   }
   .gallery-img {
-    width: 100%; height: auto; display: block;
+    width: 100%; height: 100%; display: block; object-fit: cover;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     filter: sepia(15%) contrast(1.05);
   }
