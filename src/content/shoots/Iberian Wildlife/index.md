@@ -8,8 +8,16 @@ instagramUrls:
   - https://www.instagram.com/p/DSrfl6LiCBz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
   - https://www.instagram.com/p/DSFdbkIiA8L/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
   - https://www.instagram.com/p/DR5CJXHiKIX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-  
+
+featuredImages:
+  - 3
+
 images:
+  - ./825A9696.jpg
+  - ./825A9702.jpg
+  - ./825A9705.jpg
+  - ./825A9719.jpg
+  - ./825A9721.jpg
   - ./825A0049.jpg
   - ./825A0208.jpg
   - ./825A0214.jpg
@@ -98,11 +106,7 @@ images:
   - ./825A4269.jpg
   - ./825A4274.jpg
   - ./825A9694.jpg
-  - ./825A9696.jpg
-  - ./825A9702.jpg
-  - ./825A9705.jpg
-  - ./825A9719.jpg
-  - ./825A9721.jpg
+  
 ---
 
 

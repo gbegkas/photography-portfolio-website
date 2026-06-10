@@ -19,15 +19,6 @@ const { Content } = await shoot.render();
 const hasBody = (shoot.body ?? '').trim().length > 0;
 const featured = new Set(shoot.data.featuredImages ?? []);
 
-const ROW_UNIT = 10; // px — matches grid-auto-rows in CSS
-const GAP = 12;      // px — matches gap in CSS
-const COL_WIDTH = 380; // approximate rendered column width
-
-function rowSpan(img: typeof shoot.data.images[number]) {
-  const h = Math.round((COL_WIDTH * img.height) / img.width);
-  return Math.ceil((h + GAP) / (ROW_UNIT + GAP));
-}
-
 
 ---
 
@@ -51,10 +42,10 @@ function rowSpan(img: typeof shoot.data.images[number]) {
       {shoot.data.images.length > 0 ? (
         <div class={hasBody ? "gallery-with-prose" : ""}>
           <div class="masonry" id="gallery">
+            <div class="masonry-sizer"></div>
             {shoot.data.images.map((img, i) => (
               <div
                 class={`masonry-item${featured.has(i) ? ' masonry-item--featured' : ''}`}
-                style={`animation-delay: ${0.3 + i * 0.07}s; --span: ${rowSpan(img)}`}
                 data-index={i}
               >
                 <Image
@@ -152,6 +143,43 @@ function rowSpan(img: typeof shoot.data.images[number]) {
     <div class="lb-counter" id="lb-counter">1 / 1</div>
   </div>
 </Layout>
+
+<script>
+  async function initMasonry() {
+    const grid = document.getElementById('gallery');
+    if (!grid) return;
+
+    // Dynamically load Masonry and imagesLoaded
+    await Promise.all([
+      new Promise<void>((resolve) => {
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js';
+        s.onload = () => resolve();
+        document.head.appendChild(s);
+      }),
+      new Promise<void>((resolve) => {
+        const s = document.createElement('script');
+        s.src = 'https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js';
+        s.onload = () => resolve();
+        document.head.appendChild(s);
+      }),
+    ]);
+
+    // @ts-ignore
+    const msnry = new Masonry(grid, {
+      itemSelector: '.masonry-item',
+      columnWidth: '.masonry-sizer',
+      percentPosition: true,
+      gutter: 12,
+    });
+
+    // Re-layout once all images are loaded so heights are correct
+    // @ts-ignore
+    imagesLoaded(grid).on('progress', () => msnry.layout());
+  }
+
+  initMasonry();
+</script>
 
 <script>
   const lightbox = document.getElementById('lightbox') as HTMLElement;
@@ -323,36 +351,45 @@ function rowSpan(img: typeof shoot.data.images[number]) {
   }
 
   .masonry {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 10px;
-    gap: 12px;
+    position: relative;
+  }
+
+  .masonry-sizer,
+  .masonry-sizer,
+  .masonry-item {
+    width: calc(33.333% - 8px);
+  }
+
+  .masonry-item--featured {
+    width: 100%;
   }
 
   @media (max-width: 767px) {
-    .masonry { grid-template-columns: repeat(2, 1fr); }
+    .masonry-sizer,
+    .masonry-item { width: calc(50% - 6px); }
+    .masonry-item--featured { width: 100%; }
   }
 
   .masonry-item {
-    grid-row: span var(--span);
-    overflow: hidden; position: relative; cursor: pointer;
+    margin-bottom: 12px;
+    overflow: hidden; position: absolute; cursor: pointer;
     opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
     background: #1a1916;
   }
 
   .masonry-item--featured {
-    grid-column: 1 / -1;
-    grid-row: span calc(var(--span) / 3);
+    width: 100%;
+    margin-bottom: 24px;
   }
 
   .masonry-item--featured .gallery-img {
-    max-height: 80vh;
-    object-fit: cover;
-    width: 100%;
+    max-height: none;
+    object-fit: unset;
+    height: auto;
   }
 
   .gallery-img {
-    width: 100%; height: 100%; display: block; object-fit: cover;
+    width: 100%; height: auto; display: block;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .img-overlay {
