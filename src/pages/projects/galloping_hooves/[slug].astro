@@ -37,9 +37,24 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
     </div>
 
     <!-- Gallery -->
+    {hasBody && (
+      <div class="prose-mobile">
+        <div class="shoot-prose-inner">
+          <Content />
+        </div>
+      </div>
+    )}
+
     <div class="gallery-wrap">
       {shoot.data.images.length > 0 ? (
         <div class={hasBody ? "gallery-with-prose" : ""}>
+          {hasBody && (
+            <aside class="shoot-prose shoot-prose--desktop">
+              <div class="shoot-prose-inner">
+                <Content />
+              </div>
+            </aside>
+          )}
           <div class="masonry" id="gallery">
             <div class="masonry-sizer"></div>
             {shoot.data.images.map((img, i) => (
@@ -64,13 +79,6 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
               </div>
             ))}
           </div>
-          {hasBody && (
-            <aside class="shoot-prose">
-              <div class="shoot-prose-inner">
-                <Content />
-              </div>
-            </aside>
-          )}
         </div>
       ) : (
         <p class="no-images">No images found for this shoot.</p>
@@ -137,6 +145,10 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
 
     // @ts-ignore
     imagesLoaded(grid).on('progress', () => msnry.layout());
+
+    // Relayout when container width changes (e.g. mobile flex direction switch)
+    const ro = new ResizeObserver(() => msnry.layout());
+    ro.observe(grid);
   }
 
   initMasonry();
@@ -250,30 +262,46 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
     max-width: 1600px; margin: 0 auto;
   }
 
+  /* Mobile prose block */
+  .prose-mobile {
+    display: none;
+    padding: 2rem clamp(1.5rem, 4vw, 4rem) 0;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .prose-mobile .shoot-prose-inner {
+    position: static;
+    border-left: none;
+    border-top: 1px solid rgba(240,225,200,0.12);
+    padding-left: 0;
+    padding-top: 1.5rem;
+  }
+  @media (max-width: 900px) {
+    .prose-mobile { display: block; }
+    .shoot-prose--desktop { display: none; }
+  }
+
+  /* Desktop side column */
   .gallery-with-prose {
     display: flex;
     align-items: flex-start;
     gap: clamp(2rem, 4vw, 5rem);
   }
-
   .gallery-with-prose .masonry {
     flex: 1;
     min-width: 0;
   }
-
   .shoot-prose {
     width: clamp(200px, 22vw, 360px);
     flex-shrink: 0;
     padding-top: 0.25rem;
   }
-
   .shoot-prose-inner {
     position: sticky;
     top: 6rem;
     border-left: 1px solid rgba(240,225,200,0.12);
     padding-left: 1.5rem;
   }
-
   .shoot-prose-inner :global(p) {
     font-family: var(--serif);
     font-size: clamp(1rem, 1.4vw, 1.35rem);
@@ -285,18 +313,6 @@ const hasBody = (shoot.body ?? '').trim().length > 0;
   .shoot-prose-inner :global(p + p) { margin-top: 1.1em; }
   .shoot-prose-inner :global(em)    { font-style: italic; color: rgba(240,225,200,0.45); }
   .shoot-prose-inner :global(strong){ font-weight: 400; color: var(--eq-cream); }
-
-  @media (max-width: 900px) {
-    .gallery-with-prose { flex-direction: column; }
-    .shoot-prose { width: 100%; }
-    .shoot-prose-inner {
-      position: static;
-      border-left: none;
-      border-top: 1px solid rgba(240,225,200,0.12);
-      padding-left: 0;
-      padding-top: 1.5rem;
-    }
-  }
 
   /* ── Masonry ──────────────────────────────────────────────────────────── */
   .masonry { position: relative; }
