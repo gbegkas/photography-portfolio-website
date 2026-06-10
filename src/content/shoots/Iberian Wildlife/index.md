@@ -9,8 +9,8 @@ instagramUrls:
   - https://www.instagram.com/p/DSFdbkIiA8L/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
   - https://www.instagram.com/p/DR5CJXHiKIX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
 
-featuredImages:
-  - 3
+#featuredImages:
+#  - 3
 
 images:
   - ./825A9696.jpg
