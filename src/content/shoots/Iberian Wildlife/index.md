@@ -151,5 +151,5 @@ patience was tested.
 Overall, it was a fantastic experience, and I can't wait for the opportunity to visit similar hides elsewhere in the 
 future.
 
-All photographs were captured using my Canon R6 Mark II on a small but steady travel tripod, paired with my own RF 
-100–400mm F5.6–8 IS USM and an EF 70–200mm f/2.8L IS III USM lens that I borrowed from the group.
+All photographs were captured using my Canon EOS R6 Mark II on a small but steady travel tripod, paired with my own 
+Canon RF 100–400mm F5.6–8 IS USM and a Canon EF 70–200mm f/2.8L IS III USM lens that I borrowed from the group.
