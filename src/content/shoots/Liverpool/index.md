@@ -26,6 +26,7 @@ images:
   - ./825A9808.jpg
   - ./825A9810.jpg
   - ./825A9812.jpg
+  - ./825A9821.jpg
 ---
 
 From a young age, I found myself drawn to Liverpool FC. I didn't actively follow the team back then, but I vaguely remember the miracle of Istanbul and, a little more clearly, the lost Champions League final in Athens. Later, when Jürgen Klopp joined Liverpool in 2015, I started watching the games more regularly. His words eventually came true: I went from a doubter to a believer.
