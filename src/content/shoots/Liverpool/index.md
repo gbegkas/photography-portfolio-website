@@ -1,6 +1,6 @@
 ---
 title: "Liverpool"
-description: ""
+description: "YNWA"
 cover: ./825A4290.jpg
 date: 2026-08-20
 images:
