@@ -64,9 +64,15 @@ I left knowing that I would have to come back.
 
 _December 2025_
 
-A year later, I was once again trying to find a work trip that would coincide with a Liverpool home game. In the meantime, Slot had led Liverpool to their 20th league title, and then, in July 2025, came the tragic death of Diogo Jota. When I saw that Liverpool were playing Brighton & Hove Albion at home a few days before our Christmas party, I knew I couldn't miss the opportunity.
+A year later, everything finally fell into place. 
+
+When I saw that Liverpool were playing Brighton & Hove Albion at home a few days before our Christmas party, I knew I couldn't miss the opportunity. 
 
 The ticket wasn't cheap, and I had quite a battle with myself before buying it. In the end, though, the heart won.
+
+In the meantime, the post-Klopp era was looking bright, although it had also been an emotional rollercoaster. In his first season in charge, Arne Slot led Liverpool to their 20th league title, before the tragic death of Diogo Jota in July 2025 brought a very different kind of emotion.
+
+So when I returned to Liverpool in December, it was in a very different atmosphere from my first visit.
 
 Once again, my visit was short: one day for the match and another to explore the city.
 
