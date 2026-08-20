@@ -58,15 +58,13 @@ When I finally arrived, the storm was still going, although thankfully not at it
 
 The following day was completely different. The sun was out and there was barely any rain. I visited Anfield and finally stood inside the stadium I had wanted to see for so many years.
 
-Unfortunately, the visit was short and I barely had time to explore Liverpool itself. It was also Jürgen Klopp's final season at Liverpool, and I hadn't managed to see a match at Anfield while he was still in charge.
+Unfortunately, the visit was short and I barely had time to explore Liverpool itself. Jürgen Klopp had left the club a few months earlier, so I had missed the chance to watch a match at Anfield during his final season. Still, I had finally made it to Liverpool and Anfield, even if it was under a new manager, Arne Slot, in his first season in charge.
 
 I left knowing that I would have to come back.
 
 _December 2025_
 
-A year later, everything finally fell into place.
-
-After Klopp's departure and the tragic loss of Diogo Jota, I was once again trying to find a work trip that would coincide with a Liverpool home game. This time, while I was determined to make it work, I got lucky: Liverpool were playing Brighton & Hove Albion a few days before our Christmas party.
+A year later, I was once again trying to find a work trip that would coincide with a Liverpool home game. In the meantime, Slot had led Liverpool to their 20th league title, and then, in July 2025, came the tragic death of Diogo Jota. When I saw that Liverpool were playing Brighton & Hove Albion at home a few days before our Christmas party, I knew I couldn't miss the opportunity.
 
 The ticket wasn't cheap, and I had quite a battle with myself before buying it. In the end, though, the heart won.
 
@@ -91,3 +89,5 @@ Or perhaps only the first part of it.
 Now the dream is to go back for a second match at Anfield.
 
 And, who knows, maybe a third.
+
+YNWA
