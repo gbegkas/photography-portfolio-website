@@ -1,6 +1,6 @@
 ---
 title: "Surrey & Portsmouth"
-description: ""
+description: "Where work trips became photography trips"
 date: 2025-06-20
 cover: ./825A6415-2.jpg
 images:
