@@ -2,7 +2,7 @@
 title: "Slovenia"
 description: "Exploring Ljubljana, Lake Bled and Postjna Cave"
 cover: ./825A9119.jpg
-date: 2026-08-22
+date: 2024-10-15
 images:
   - ./825A8560-Pano.jpg
   - ./825A8571.jpg

@@ -2,7 +2,7 @@
 title: "Liverpool"
 description: "YNWA"
 cover: ./825A4290.jpg
-date: 2026-08-20
+date: 2025-12-20
 images:
   - ./825A4290.jpg
   - ./825A4292.jpg

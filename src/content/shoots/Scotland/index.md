@@ -2,7 +2,7 @@
 title: "Scotland"
 description: "Cold streets, wild landscapes and unforgettable light"
 cover: ./825A0670.jpg
-date: 2026-08-22
+date: 2025-03-25
 images:
   - ./825A0004.jpg
   - ./825A0021.jpg
