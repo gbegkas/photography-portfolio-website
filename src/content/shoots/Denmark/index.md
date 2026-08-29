@@ -2,7 +2,7 @@
 title: "Denmark"
 description: "Cityscapes, LEGO and two brothers exploring Denmark"
 cover: ./825A4221.jpg
-date: 2026-08-30
+date: 2026-05-09
 images:
   - ./825A4221.jpg
   - ./825A4226.jpg
