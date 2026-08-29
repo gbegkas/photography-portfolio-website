@@ -1,6 +1,6 @@
 ---
 title: "Horses"
-description: "Stills from various tournaments"
+description: "Stills from various competitions"
 cover: ./cover.jpg
 order: 1
 date: '2024-12-01'
