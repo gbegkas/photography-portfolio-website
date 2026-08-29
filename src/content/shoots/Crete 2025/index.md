@@ -2,7 +2,7 @@
 title: "Crete in summer"
 description: "When Plan A fails, bring a camera"
 cover: ./825A2216.jpg
-date: 2026-08-29
+date: 2025-07-30
 images:
   - ./825A2216.jpg
   - ./825A2217.jpg
