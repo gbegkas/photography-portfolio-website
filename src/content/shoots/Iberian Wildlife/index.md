@@ -1,17 +1,17 @@
 ---
-title: "Iberian Wildlife"
-description: "Hide photography in Spain"
-date: 2025-12-05
+title: Iberian Wildlife
+description: Hide photography in Spain
+date: 2025-12-05T00:00:00.000Z
 cover: ./825A2877.jpg
 instagramUrls:
-  - https://www.instagram.com/p/DUSgcZbiJd6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-  - https://www.instagram.com/p/DSrfl6LiCBz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-  - https://www.instagram.com/p/DSFdbkIiA8L/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-  - https://www.instagram.com/p/DR5CJXHiKIX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
-
-#featuredImages:
-#  - 3
-
+  - >-
+    https://www.instagram.com/p/DUSgcZbiJd6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+  - >-
+    https://www.instagram.com/p/DSrfl6LiCBz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+  - >-
+    https://www.instagram.com/p/DSFdbkIiA8L/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+  - >-
+    https://www.instagram.com/p/DR5CJXHiKIX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
 images:
   - ./825A9696.jpg
   - ./825A9702.jpg
@@ -106,7 +106,286 @@ images:
   - ./825A4269.jpg
   - ./825A4274.jpg
   - ./825A9694.jpg
-  
+imageDims:
+  ./825A2877.jpg:
+    width: 2500
+    height: 1667
+  ./825A9696.jpg:
+    width: 2500
+    height: 1667
+  ./825A9702.jpg:
+    width: 2500
+    height: 1667
+  ./825A9705.jpg:
+    width: 2500
+    height: 1667
+  ./825A9719.jpg:
+    width: 2500
+    height: 1667
+  ./825A9721.jpg:
+    width: 2500
+    height: 1667
+  ./825A0049.jpg:
+    width: 2500
+    height: 1667
+  ./825A0208.jpg:
+    width: 1828
+    height: 2500
+  ./825A0214.jpg:
+    width: 1667
+    height: 2500
+  ./825A0347.jpg:
+    width: 1828
+    height: 2500
+  ./825A0348.jpg:
+    width: 2500
+    height: 1667
+  ./825A0499.jpg:
+    width: 1667
+    height: 2500
+  ./825A0586.jpg:
+    width: 1828
+    height: 2500
+  ./825A0618.jpg:
+    width: 1667
+    height: 2500
+  ./825A0679.jpg:
+    width: 1828
+    height: 2500
+  ./825A0696.jpg:
+    width: 2500
+    height: 1667
+  ./825A0736.jpg:
+    width: 2500
+    height: 1667
+  ./825A0786.jpg:
+    width: 2500
+    height: 1667
+  ./825A0787.jpg:
+    width: 2500
+    height: 1667
+  ./825A0790.jpg:
+    width: 2500
+    height: 1667
+  ./825A0850.jpg:
+    width: 2500
+    height: 1667
+  ./825A0869.jpg:
+    width: 1667
+    height: 2500
+  ./825A0924.jpg:
+    width: 1828
+    height: 2500
+  ./825A0986.jpg:
+    width: 1828
+    height: 2500
+  ./825A1094.jpg:
+    width: 1828
+    height: 2500
+  ./825A1151.jpg:
+    width: 2500
+    height: 1667
+  ./825A1377-2.jpg:
+    width: 1829
+    height: 2500
+  ./825A1377.jpg:
+    width: 1828
+    height: 2500
+  ./825A1460.jpg:
+    width: 1667
+    height: 2500
+  ./825A1569.jpg:
+    width: 2500
+    height: 1667
+  ./825A1584.jpg:
+    width: 1960
+    height: 2500
+  ./825A1601.jpg:
+    width: 1960
+    height: 2500
+  ./825A1664.jpg:
+    width: 2500
+    height: 1667
+  ./825A1726.jpg:
+    width: 2500
+    height: 1667
+  ./825A1847.jpg:
+    width: 1667
+    height: 2500
+  ./825A1853.jpg:
+    width: 1828
+    height: 2500
+  ./825A1955.jpg:
+    width: 2500
+    height: 1667
+  ./825A1972.jpg:
+    width: 2500
+    height: 1667
+  ./825A1985.jpg:
+    width: 1828
+    height: 2500
+  ./825A2028.jpg:
+    width: 1828
+    height: 2500
+  ./825A2276.jpg:
+    width: 1828
+    height: 2500
+  ./825A2360.jpg:
+    width: 1828
+    height: 2500
+  ./825A2361.jpg:
+    width: 1828
+    height: 2500
+  ./825A2374-2.jpg:
+    width: 1828
+    height: 2500
+  ./825A2374.jpg:
+    width: 1828
+    height: 2500
+  ./825A2558.jpg:
+    width: 2500
+    height: 1667
+  ./825A2635.jpg:
+    width: 2500
+    height: 1667
+  ./825A2647.jpg:
+    width: 2500
+    height: 1828
+  ./825A2705.jpg:
+    width: 1828
+    height: 2500
+  ./825A2707.jpg:
+    width: 1828
+    height: 2500
+  ./825A2731.jpg:
+    width: 2500
+    height: 1667
+  ./825A2736.jpg:
+    width: 2500
+    height: 1667
+  ./825A2766.jpg:
+    width: 1828
+    height: 2500
+  ./825A2821.jpg:
+    width: 2500
+    height: 1667
+  ./825A2838.jpg:
+    width: 1828
+    height: 2500
+  ./825A2860.jpg:
+    width: 1828
+    height: 2500
+  ./825A2862.jpg:
+    width: 1828
+    height: 2500
+  ./825A2924.jpg:
+    width: 2500
+    height: 1667
+  ./825A2931.jpg:
+    width: 2500
+    height: 1667
+  ./825A2953.jpg:
+    width: 1828
+    height: 2500
+  ./825A2959.jpg:
+    width: 1828
+    height: 2500
+  ./825A3016.jpg:
+    width: 2500
+    height: 1667
+  ./825A3027.jpg:
+    width: 1828
+    height: 2500
+  ./825A3054.jpg:
+    width: 1828
+    height: 2500
+  ./825A3064.jpg:
+    width: 2500
+    height: 1667
+  ./825A3065.jpg:
+    width: 1828
+    height: 2500
+  ./825A3145.jpg:
+    width: 2500
+    height: 1667
+  ./825A3184.jpg:
+    width: 2500
+    height: 1667
+  ./825A3231.jpg:
+    width: 2500
+    height: 1667
+  ./825A3247.jpg:
+    width: 1667
+    height: 2500
+  ./825A3254.jpg:
+    width: 1667
+    height: 2500
+  ./825A3321.jpg:
+    width: 2500
+    height: 1667
+  ./825A3402.jpg:
+    width: 1667
+    height: 2500
+  ./825A3447.jpg:
+    width: 1828
+    height: 2500
+  ./825A3466.jpg:
+    width: 2500
+    height: 1667
+  ./825A3491.jpg:
+    width: 2500
+    height: 1667
+  ./825A3535.jpg:
+    width: 2500
+    height: 1667
+  ./825A3551.jpg:
+    width: 2500
+    height: 1667
+  ./825A3564.jpg:
+    width: 2500
+    height: 1667
+  ./825A3651.jpg:
+    width: 2500
+    height: 1667
+  ./825A3665.jpg:
+    width: 2500
+    height: 1667
+  ./825A3680.jpg:
+    width: 1828
+    height: 2500
+  ./825A3688.jpg:
+    width: 2500
+    height: 1667
+  ./825A3784.jpg:
+    width: 1875
+    height: 2500
+  ./825A3798.jpg:
+    width: 1828
+    height: 2500
+  ./825A3831.jpg:
+    width: 2500
+    height: 1667
+  ./825A3861.jpg:
+    width: 2500
+    height: 1667
+  ./825A3930.jpg:
+    width: 1828
+    height: 2500
+  ./825A3952.jpg:
+    width: 2500
+    height: 1667
+  ./825A4144.jpg:
+    width: 2500
+    height: 1828
+  ./825A4269.jpg:
+    width: 2500
+    height: 1667
+  ./825A4274.jpg:
+    width: 2500
+    height: 1667
+  ./825A9694.jpg:
+    width: 2500
+    height: 1667
 ---
 
 

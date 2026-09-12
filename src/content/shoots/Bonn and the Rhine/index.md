@@ -1,8 +1,8 @@
 ---
-title: "Bonn and the Rhine"
-description: "Came for the hackathon, stayed for the photographs"
+title: Bonn and the Rhine
+description: 'Came for the hackathon, stayed for the photographs'
 cover: ./825A4069.jpg
-date: 2025-09-30
+date: 2025-09-30T00:00:00.000Z
 images:
   - ./20250925_130207(1).jpg
   - ./20250925_165029.jpg
@@ -41,6 +41,118 @@ images:
   - ./825A4295.jpg
   - ./825A4297.jpg
   - ./825A4309.jpg
+imageDims:
+  ./825A4069.jpg:
+    width: 2500
+    height: 1517
+  ./20250925_130207(1).jpg:
+    width: 1875
+    height: 2500
+  ./20250925_165029.jpg:
+    width: 1875
+    height: 2500
+  ./20250925_165252.jpg:
+    width: 1875
+    height: 2500
+  ./825A4008.jpg:
+    width: 2500
+    height: 1667
+  ./825A4047.jpg:
+    width: 1667
+    height: 2500
+  ./825A4059.jpg:
+    width: 1960
+    height: 2500
+  ./825A4060.jpg:
+    width: 1960
+    height: 2500
+  ./825A4064.jpg:
+    width: 1667
+    height: 2500
+  ./825A4076.jpg:
+    width: 1667
+    height: 2500
+  ./825A4081.jpg:
+    width: 1828
+    height: 2500
+  ./825A4083.jpg:
+    width: 2500
+    height: 1667
+  ./825A4085.jpg:
+    width: 1828
+    height: 2500
+  ./825A4086.jpg:
+    width: 2500
+    height: 1667
+  ./825A4100.jpg:
+    width: 1667
+    height: 2500
+  ./825A4122.jpg:
+    width: 1667
+    height: 2500
+  ./825A4146.jpg:
+    width: 1667
+    height: 2500
+  ./825A4151.jpg:
+    width: 1828
+    height: 2500
+  ./825A4153.jpg:
+    width: 2500
+    height: 1667
+  ./825A4159.jpg:
+    width: 1667
+    height: 2500
+  ./825A4165.jpg:
+    width: 1667
+    height: 2500
+  ./825A4166.jpg:
+    width: 1667
+    height: 2500
+  ./825A4168.jpg:
+    width: 1667
+    height: 2500
+  ./825A4176.jpg:
+    width: 1667
+    height: 2500
+  ./825A4225.jpg:
+    width: 2500
+    height: 1667
+  ./825A4228-Pano.jpg:
+    width: 2000
+    height: 2500
+  ./825A4231.jpg:
+    width: 1828
+    height: 2500
+  ./825A4253.jpg:
+    width: 1828
+    height: 2500
+  ./825A4255.jpg:
+    width: 1667
+    height: 2500
+  ./825A4259.jpg:
+    width: 1828
+    height: 2500
+  ./825A4275.jpg:
+    width: 1667
+    height: 2500
+  ./825A4281.jpg:
+    width: 1667
+    height: 2500
+  ./825A4285.jpg:
+    width: 2500
+    height: 1626
+  ./825A4293.jpg:
+    width: 2500
+    height: 1667
+  ./825A4295.jpg:
+    width: 1828
+    height: 2500
+  ./825A4297.jpg:
+    width: 1828
+    height: 2500
+  ./825A4309.jpg:
+    width: 1667
+    height: 2500
 ---
 
 In 2025, a few friends and I joined Code for Earth as a team, a hackathon organised by ECMWF. The challenge focused on developing a solution to an Earth observation problem, which closely aligned with my day-to-day work as a software engineer in Earth observation. I took part in my own time, though, as this was a personal project rather than something connected to my day job. The final day was held at ECMWF's offices in Bonn, Germany, so I decided to stay for a couple of extra days and explore the area.

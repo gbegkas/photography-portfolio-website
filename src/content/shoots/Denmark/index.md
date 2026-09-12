@@ -1,8 +1,8 @@
 ---
-title: "Denmark"
-description: "Cityscapes, LEGO and two brothers exploring Denmark"
+title: Denmark
+description: 'Cityscapes, LEGO and two brothers exploring Denmark'
 cover: ./825A4221.jpg
-date: 2026-05-09
+date: 2026-05-09T00:00:00.000Z
 images:
   - ./825A4221.jpg
   - ./825A4226.jpg
@@ -45,6 +45,130 @@ images:
   - ./825A5524.jpg
   - ./825A5797.jpg
   - ./825A5811.jpg
+imageDims:
+  ./825A4221.jpg:
+    width: 2500
+    height: 1667
+  ./825A4226.jpg:
+    width: 1667
+    height: 2500
+  ./825A4228.jpg:
+    width: 1667
+    height: 2500
+  ./825A4229.jpg:
+    width: 1667
+    height: 2500
+  ./825A4232.jpg:
+    width: 2500
+    height: 1667
+  ./825A4238.jpg:
+    width: 2500
+    height: 1667
+  ./825A4243.jpg:
+    width: 2500
+    height: 1667
+  ./825A4247.jpg:
+    width: 1667
+    height: 2500
+  ./825A4252.jpg:
+    width: 1667
+    height: 2500
+  ./825A4256.jpg:
+    width: 1667
+    height: 2500
+  ./825A4259.jpg:
+    width: 1828
+    height: 2500
+  ./825A4264.jpg:
+    width: 1667
+    height: 2500
+  ./825A4268.jpg:
+    width: 1667
+    height: 2500
+  ./825A4270.jpg:
+    width: 1828
+    height: 2500
+  ./825A4273.jpg:
+    width: 2500
+    height: 1667
+  ./825A4278.jpg:
+    width: 1667
+    height: 2500
+  ./825A4282.jpg:
+    width: 1667
+    height: 2500
+  ./825A4323.jpg:
+    width: 1667
+    height: 2500
+  ./825A4369.jpg:
+    width: 1667
+    height: 2500
+  ./825A4375.jpg:
+    width: 1667
+    height: 2500
+  ./825A4378.jpg:
+    width: 1667
+    height: 2500
+  ./825A4382.jpg:
+    width: 1667
+    height: 2500
+  ./825A4666.jpg:
+    width: 1667
+    height: 2500
+  ./825A4706.jpg:
+    width: 1667
+    height: 2500
+  ./825A5118.jpg:
+    width: 1667
+    height: 2500
+  ./825A5171.jpg:
+    width: 1667
+    height: 2500
+  ./825A5220.jpg:
+    width: 1828
+    height: 2500
+  ./825A5225.jpg:
+    width: 1828
+    height: 2500
+  ./825A5262.jpg:
+    width: 1667
+    height: 2500
+  ./825A5265.jpg:
+    width: 1667
+    height: 2500
+  ./825A5268.jpg:
+    width: 1667
+    height: 2500
+  ./825A5269.jpg:
+    width: 1667
+    height: 2500
+  ./825A5273.jpg:
+    width: 1667
+    height: 2500
+  ./825A5446.jpg:
+    width: 2500
+    height: 1667
+  ./825A5469.jpg:
+    width: 1828
+    height: 2500
+  ./825A5484.jpg:
+    width: 1667
+    height: 2500
+  ./825A5497.jpg:
+    width: 1667
+    height: 2500
+  ./825A5503.jpg:
+    width: 2500
+    height: 1667
+  ./825A5524.jpg:
+    width: 2500
+    height: 1667
+  ./825A5797.jpg:
+    width: 1667
+    height: 2500
+  ./825A5811.jpg:
+    width: 2500
+    height: 1667
 ---
 This trip to Denmark was a purely recreational one, and one I took with my brother. We spent most of our time in 
 Copenhagen, exploring the city and its many landmarks, before heading to Billund for two days dedicated to something we

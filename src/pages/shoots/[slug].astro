@@ -2,8 +2,8 @@
 import Layout from "../../components/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { cdnUrl, THUMB, FULL } from "../../lib/cdn";
 const url = (path: string) => `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
 
 export async function getStaticPaths() {
@@ -19,6 +19,9 @@ const { Content } = await shoot.render();
 const hasBody = (shoot.body ?? '').trim().length > 0;
 const featured = new Set(shoot.data.featuredImages ?? []);
 
+// raw folder name as it exists on disk / in R2 (e.g. "Crete in summer")
+const folder = shoot.id.replace(/\/index\.md$/, '');
+
 
 ---
 
@@ -27,7 +30,7 @@ const featured = new Set(shoot.data.featuredImages ?? []);
 
   <div class="shoot-page">
     <div class="shoot-hero">
-      <Image src={shoot.data.cover} alt={shoot.data.title} class="shoot-hero-img" />
+      <img src={cdnUrl("shoots", folder, shoot.data.cover, FULL)} alt={shoot.data.title} class="shoot-hero-img" />
       <div class="shoot-hero-overlay"></div>
       <div class="shoot-hero-content">
         <a href={url('/')} class="back-link">← All Work</a>
@@ -63,12 +66,13 @@ const featured = new Set(shoot.data.featuredImages ?? []);
                 class={`masonry-item${featured.has(i) ? ' masonry-item--featured' : ''}`}
                 data-index={i}
               >
-                <Image
-                  src={img}
+                <img
+                  src={cdnUrl("shoots", folder, img, THUMB)}
+                  data-full={cdnUrl("shoots", folder, img, FULL)}
                   alt={`${shoot.data.title} — ${i + 1}`}
                   class="gallery-img"
-                  width={img.width}
-                  height={img.height}
+                  width={shoot.data.imageDims?.[img]?.width}
+                  height={shoot.data.imageDims?.[img]?.height}
                   loading={i < 9 ? "eager" : "lazy"}
                   fetchpriority={i < 9 ? "high" : "low"}
                 />
@@ -205,8 +209,8 @@ const featured = new Set(shoot.data.featuredImages ?? []);
   if (!lightbox || !lbImg || !lbCounter || !lbClose || !lbPrev || !lbNext || !lbBackdrop) {
     console.error('Lightbox: one or more required elements not found');
   } else {
-    // Read srcs from the already-rendered <Image> elements so we get WebP URLs
-    const allSlides = Array.from(document.querySelectorAll<HTMLImageElement>('.gallery-img')).map(img => img.src);
+    // Read the small (thumbnail) src plus the full-size CDN url from data-full
+    const allSlides = Array.from(document.querySelectorAll<HTMLImageElement>('.gallery-img')).map(img => img.dataset.full || img.src);
 
     let current = 0;
     const total = allSlides.length;

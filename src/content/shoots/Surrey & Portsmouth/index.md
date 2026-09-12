@@ -1,7 +1,7 @@
 ---
-title: "Surrey & Portsmouth"
-description: "Where work trips became photography trips"
-date: 2025-06-20
+title: Surrey & Portsmouth
+description: Where work trips became photography trips
+date: 2025-06-20T00:00:00.000Z
 cover: ./825A6415-2.jpg
 images:
   - ./825A0823.jpg
@@ -19,6 +19,52 @@ images:
   - ./825A0837.jpg
   - ./825A1900.jpg
   - ./825A8098.jpg
+imageDims:
+  ./825A6415-2.jpg:
+    width: 2500
+    height: 1667
+  ./825A0823.jpg:
+    width: 1667
+    height: 2500
+  ./825A0836.jpg:
+    width: 2500
+    height: 1667
+  ./825A1887.jpg:
+    width: 1667
+    height: 2500
+  ./825A1893.jpg:
+    width: 2500
+    height: 1667
+  ./825A4446.jpg:
+    width: 1828
+    height: 2500
+  ./825A6196-2.jpg:
+    width: 2500
+    height: 1667
+  ./825A6403.jpg:
+    width: 1667
+    height: 2500
+  ./825A6423.jpg:
+    width: 2500
+    height: 1667
+  ./825A6535.jpg:
+    width: 1667
+    height: 2500
+  ./825A6551-2.jpg:
+    width: 2500
+    height: 1667
+  ./825A8141.jpg:
+    width: 1667
+    height: 2500
+  ./825A0837.jpg:
+    width: 1667
+    height: 2500
+  ./825A1900.jpg:
+    width: 2500
+    height: 1667
+  ./825A8098.jpg:
+    width: 2500
+    height: 1667
 ---
 
 Over the last four and a half years, I’ve travelled to the south east of the UK for my day job. The company I work for organises two-day on-site meetings four or five times a year, which has given me the chance to visit places such as Guildford, East Horsley, Redhill and Portsmouth.

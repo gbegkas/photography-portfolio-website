@@ -1,7 +1,7 @@
 ---
-title: "Xanthi Carnival Fireworks"
-description: "Learning to photograph fireworks on the fly"
-date: 2026-02-22
+title: Xanthi Carnival Fireworks
+description: Learning to photograph fireworks on the fly
+date: 2026-02-22T00:00:00.000Z
 cover: ./cover.jpg
 images:
   - ./1.jpg
@@ -28,6 +28,79 @@ images:
   - ./8.jpg
   - ./9.jpg
   - ./cover.jpg
+imageDims:
+  ./cover.jpg:
+    width: 2500
+    height: 1667
+  ./1.jpg:
+    width: 2500
+    height: 1828
+  ./10.jpg:
+    width: 1828
+    height: 2500
+  ./11.jpg:
+    width: 1828
+    height: 2500
+  ./12.jpg:
+    width: 1828
+    height: 2500
+  ./13.jpg:
+    width: 1828
+    height: 2500
+  ./14.jpg:
+    width: 1828
+    height: 2500
+  ./15.jpg:
+    width: 1828
+    height: 2500
+  ./16.jpg:
+    width: 2500
+    height: 1667
+  ./17.jpg:
+    width: 1828
+    height: 2500
+  ./18.jpg:
+    width: 1828
+    height: 2500
+  ./19.jpg:
+    width: 1828
+    height: 2500
+  ./2.jpg:
+    width: 1828
+    height: 2500
+  ./3.jpg:
+    width: 1828
+    height: 2500
+  ./20.jpg:
+    width: 1828
+    height: 2500
+  ./21.jpg:
+    width: 1828
+    height: 2500
+  ./22.jpg:
+    width: 1828
+    height: 2500
+  ./23.jpg:
+    width: 1828
+    height: 2500
+  ./4.jpg:
+    width: 1828
+    height: 2500
+  ./5.jpg:
+    width: 1828
+    height: 2500
+  ./6.jpg:
+    width: 1828
+    height: 2500
+  ./7.jpg:
+    width: 1828
+    height: 2500
+  ./8.jpg:
+    width: 1828
+    height: 2500
+  ./9.jpg:
+    width: 1828
+    height: 2500
 ---
 
 My hometown hosts one of the largest carnivals in Greece every year. The celebrations traditionally conclude with the 

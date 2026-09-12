@@ -1,8 +1,8 @@
 ---
-title: "Under the Night Sky"
-description: "My first steps into astrophotography"
+title: Under the Night Sky
+description: My first steps into astrophotography
 cover: ./stack2.jpg
-date: 2026-08-31
+date: 2026-08-31T00:00:00.000Z
 images:
   - ./20260712_001453.jpg
   - ./825A6208.jpg
@@ -24,6 +24,67 @@ images:
   - ./sounio 2.jpg
   - ./stack2.jpg
   - ./zagori.jpg
+imageDims:
+  ./stack2.jpg:
+    width: 2500
+    height: 1667
+  ./20260712_001453.jpg:
+    width: 4000
+    height: 2252
+  ./825A6208.jpg:
+    width: 1667
+    height: 2500
+  ./825A6248.jpg:
+    width: 1667
+    height: 2500
+  ./825A6321.jpg:
+    width: 2500
+    height: 1667
+  ./825A7224.jpg:
+    width: 1828
+    height: 2500
+  ./825A7284.jpg:
+    width: 2500
+    height: 1667
+  ./825A7285.jpg:
+    width: 2500
+    height: 1667
+  ./Andromeda Galaxy-64x15s-12Jul26 .jpg:
+    width: 2560
+    height: 2560
+  ./Dumbell Planetary Nebula-36x15s-11Jul26.jpg:
+    width: 2560
+    height: 2560
+  ./Lagoon-40x15s-12Jul26.jpg:
+    width: 2560
+    height: 2560
+  ./M13 Hercules Star Cluster-15x15s-12Jul26.jpg:
+    width: 2560
+    height: 2560
+  ./M51 Galaxy-24x15s-10Jul26-234057.jpg:
+    width: 4000
+    height: 4000
+  ./STACK1.jpg:
+    width: 1667
+    height: 2500
+  ./output1 (2).jpg:
+    width: 1828
+    height: 2500
+  ./output1-2.jpg:
+    width: 2500
+    height: 1626
+  ./set1.jpg:
+    width: 1828
+    height: 2500
+  ./sounio 1.jpg:
+    width: 2500
+    height: 1667
+  ./sounio 2.jpg:
+    width: 1667
+    height: 2500
+  ./zagori.jpg:
+    width: 2500
+    height: 1667
 ---
 
 This summer I finally tried my luck at astrophotography. I've been fascinated by the night sky since I was a kid, and ever since I got my camera, photographing the stars had been on my list.

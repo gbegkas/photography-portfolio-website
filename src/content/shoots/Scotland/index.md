@@ -1,8 +1,8 @@
 ---
-title: "Scotland"
-description: "Cold streets, wild landscapes and unforgettable light"
+title: Scotland
+description: 'Cold streets, wild landscapes and unforgettable light'
 cover: ./825A0670.jpg
-date: 2025-03-25
+date: 2025-03-25T00:00:00.000Z
 images:
   - ./825A0004.jpg
   - ./825A0021.jpg
@@ -63,6 +63,184 @@ images:
   - ./825A9989.jpg
   - ./825A9991.jpg
   - ./825A9999.jpg
+imageDims:
+  ./825A0670.jpg:
+    width: 2500
+    height: 1667
+  ./825A0004.jpg:
+    width: 1667
+    height: 2500
+  ./825A0021.jpg:
+    width: 1667
+    height: 2500
+  ./825A0031.jpg:
+    width: 2500
+    height: 1667
+  ./825A0032.jpg:
+    width: 1667
+    height: 2500
+  ./825A0040.jpg:
+    width: 1667
+    height: 2500
+  ./825A0042.jpg:
+    width: 2500
+    height: 1667
+  ./825A0445.jpg:
+    width: 1667
+    height: 2500
+  ./825A0451.jpg:
+    width: 2500
+    height: 1667
+  ./825A0455.jpg:
+    width: 2500
+    height: 1667
+  ./825A0461.jpg:
+    width: 1667
+    height: 2500
+  ./825A0474.jpg:
+    width: 1667
+    height: 2500
+  ./825A0475.jpg:
+    width: 2500
+    height: 1667
+  ./825A0487.jpg:
+    width: 1667
+    height: 2500
+  ./825A0496.jpg:
+    width: 1667
+    height: 2500
+  ./825A0502.jpg:
+    width: 2500
+    height: 1667
+  ./825A0506.jpg:
+    width: 1667
+    height: 2500
+  ./825A0509-Enhanced-NR.jpg:
+    width: 1764
+    height: 2500
+  ./825A0519.jpg:
+    width: 2500
+    height: 1667
+  ./825A0526.jpg:
+    width: 1667
+    height: 2500
+  ./825A0615.jpg:
+    width: 2500
+    height: 1667
+  ./825A0629.jpg:
+    width: 1667
+    height: 2500
+  ./825A0630.jpg:
+    width: 2500
+    height: 1667
+  ./825A0635.jpg:
+    width: 2500
+    height: 1667
+  ./825A0642.jpg:
+    width: 2500
+    height: 1667
+  ./825A0645.jpg:
+    width: 2500
+    height: 1667
+  ./825A0669.jpg:
+    width: 1667
+    height: 2500
+  ./825A0677.jpg:
+    width: 2500
+    height: 1667
+  ./825A0690.jpg:
+    width: 1667
+    height: 2500
+  ./825A0697.jpg:
+    width: 2500
+    height: 1667
+  ./825A0703.jpg:
+    width: 1667
+    height: 2500
+  ./825A0710.jpg:
+    width: 1667
+    height: 2500
+  ./825A0715.jpg:
+    width: 1667
+    height: 2500
+  ./825A0719.jpg:
+    width: 1667
+    height: 2500
+  ./825A0721.jpg:
+    width: 1667
+    height: 2500
+  ./825A0723.jpg:
+    width: 1667
+    height: 2500
+  ./825A0726.jpg:
+    width: 1667
+    height: 2500
+  ./825A0741-Enhanced-NR.jpg:
+    width: 1667
+    height: 2500
+  ./825A0746-HDR.jpg:
+    width: 2500
+    height: 1667
+  ./825A0758-HDR.jpg:
+    width: 1786
+    height: 2500
+  ./825A0766.jpg:
+    width: 2500
+    height: 1667
+  ./825A0767.jpg:
+    width: 1667
+    height: 2500
+  ./825A0768.jpg:
+    width: 1667
+    height: 2500
+  ./825A0773.jpg:
+    width: 2500
+    height: 1667
+  ./825A0775.jpg:
+    width: 1667
+    height: 2500
+  ./825A0780.jpg:
+    width: 2500
+    height: 1667
+  ./825A0794.jpg:
+    width: 1667
+    height: 2500
+  ./825A0805.jpg:
+    width: 1667
+    height: 2500
+  ./825A0809.jpg:
+    width: 2500
+    height: 1667
+  ./825A9822.jpg:
+    width: 1667
+    height: 2500
+  ./825A9899.jpg:
+    width: 1667
+    height: 2500
+  ./825A9916.jpg:
+    width: 1667
+    height: 2500
+  ./825A9973.jpg:
+    width: 2000
+    height: 2500
+  ./825A9976.jpg:
+    width: 1667
+    height: 2500
+  ./825A9980.jpg:
+    width: 1667
+    height: 2500
+  ./825A9986.jpg:
+    width: 1649
+    height: 2500
+  ./825A9989.jpg:
+    width: 1667
+    height: 2500
+  ./825A9991.jpg:
+    width: 2500
+    height: 1667
+  ./825A9999.jpg:
+    width: 2500
+    height: 1667
 ---
 
 Everyone told me I had to visit Edinburgh, and Scotland in general, especially after getting my camera and gaining some experience with it. After Slovenia, a colleague and dear friend of mine started her Master’s at the University of Edinburgh, which gave me the perfect opportunity to finally plan a visit.

@@ -1,8 +1,8 @@
 ---
-title: "Liverpool"
-description: "YNWA"
+title: Liverpool
+description: YNWA
 cover: ./825A4290.jpg
-date: 2025-12-20
+date: 2025-12-20T00:00:00.000Z
 images:
   - ./825A4290.jpg
   - ./825A4292.jpg
@@ -41,6 +41,118 @@ images:
   - ./825A9810.jpg
   - ./825A9812.jpg
   - ./825A9821.jpg
+imageDims:
+  ./825A4290.jpg:
+    width: 2500
+    height: 1667
+  ./825A4292.jpg:
+    width: 1828
+    height: 2500
+  ./825A4296.jpg:
+    width: 1667
+    height: 2500
+  ./825A4297.jpg:
+    width: 1828
+    height: 2500
+  ./825A4301.jpg:
+    width: 2500
+    height: 1667
+  ./825A4302.jpg:
+    width: 1828
+    height: 2500
+  ./825A4305-Pano.jpg:
+    width: 2500
+    height: 1664
+  ./825A4306.jpg:
+    width: 2500
+    height: 1667
+  ./825A4307.jpg:
+    width: 1667
+    height: 2500
+  ./825A4308.jpg:
+    width: 2500
+    height: 2000
+  ./825A4312.jpg:
+    width: 1667
+    height: 2500
+  ./825A4313.jpg:
+    width: 1828
+    height: 2500
+  ./825A4334.jpg:
+    width: 1828
+    height: 2500
+  ./825A4335.jpg:
+    width: 1667
+    height: 2500
+  ./825A4341.jpg:
+    width: 1667
+    height: 2500
+  ./825A4343.jpg:
+    width: 1667
+    height: 2500
+  ./825A4346.jpg:
+    width: 1828
+    height: 2500
+  ./825A4424.jpg:
+    width: 2500
+    height: 1667
+  ./825A4431.jpg:
+    width: 1786
+    height: 2500
+  ./825A4432.jpg:
+    width: 2500
+    height: 1667
+  ./825A9734.jpg:
+    width: 1667
+    height: 2500
+  ./825A9735.jpg:
+    width: 2500
+    height: 1667
+  ./825A9754.jpg:
+    width: 2500
+    height: 1667
+  ./825A9755.jpg:
+    width: 2500
+    height: 1667
+  ./825A9757-Pano.jpg:
+    width: 2500
+    height: 724
+  ./825A9757.jpg:
+    width: 2500
+    height: 1667
+  ./825A9769.jpg:
+    width: 1667
+    height: 2500
+  ./825A9799.jpg:
+    width: 1667
+    height: 2500
+  ./825A9802.jpg:
+    width: 2500
+    height: 2000
+  ./825A9803.jpg:
+    width: 1667
+    height: 2500
+  ./825A9804.jpg:
+    width: 1667
+    height: 2500
+  ./825A9805.jpg:
+    width: 2500
+    height: 1667
+  ./825A9806.jpg:
+    width: 1667
+    height: 2500
+  ./825A9808.jpg:
+    width: 2500
+    height: 1667
+  ./825A9810.jpg:
+    width: 1667
+    height: 2500
+  ./825A9812.jpg:
+    width: 1667
+    height: 2500
+  ./825A9821.jpg:
+    width: 1667
+    height: 2500
 ---
 From a young age, I found myself drawn to Liverpool FC. I didn't actively follow the team back then, but I vaguely remember the miracle of Istanbul and, a little more clearly, the lost Champions League final in Athens. Later, when Jürgen Klopp joined Liverpool in 2015, I started watching the games more regularly. His words eventually came true: I went from a doubter to a believer.
 

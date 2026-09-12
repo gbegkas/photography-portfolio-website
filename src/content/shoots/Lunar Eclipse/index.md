@@ -1,7 +1,7 @@
 ---
-title: "Lunar Eclipse"
-description: "Blood Moon in early September"
-date: 2025-09-02
+title: Lunar Eclipse
+description: Blood Moon in early September
+date: 2025-09-02T00:00:00.000Z
 cover: ./825A3168.jpg
 featuredImages:
   - 0
@@ -11,6 +11,16 @@ images:
   - ./825A3168.jpg
   - ./825A3167.jpg
   - ./IMG_0001-3.jpg
+imageDims:
+  ./825A3168.jpg:
+    width: 2500
+    height: 1667
+  ./825A3167.jpg:
+    width: 2000
+    height: 2500
+  ./IMG_0001-3.jpg:
+    width: 2000
+    height: 2500
 ---
 
 2025 was a year of experimentation for me as a photographer. I spent much of it trying new techniques and subjects, and

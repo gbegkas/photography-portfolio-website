@@ -1,8 +1,8 @@
 ---
-title: "London, Through a Different Lens"
-description: "A familiar city, a different approach"
+title: 'London, Through a Different Lens'
+description: 'A familiar city, a different approach'
 cover: ./825A3542.jpg
-date: 2026-03-10
+date: 2026-03-10T00:00:00.000Z
 images:
   - ./825A3447.jpg
   - ./825A3453.jpg
@@ -24,6 +24,67 @@ images:
   - ./825A3583.jpg
   - ./825A3588.jpg
   - ./825A3594.jpg
+imageDims:
+  ./825A3542.jpg:
+    width: 2500
+    height: 1667
+  ./825A3447.jpg:
+    width: 1828
+    height: 2500
+  ./825A3453.jpg:
+    width: 1667
+    height: 2500
+  ./825A3454.jpg:
+    width: 1667
+    height: 2500
+  ./825A3469.jpg:
+    width: 1828
+    height: 2500
+  ./825A3482.jpg:
+    width: 1667
+    height: 2500
+  ./825A3485.jpg:
+    width: 2500
+    height: 1667
+  ./825A3486.jpg:
+    width: 1667
+    height: 2500
+  ./825A3517.jpg:
+    width: 1667
+    height: 2500
+  ./825A3522.jpg:
+    width: 1667
+    height: 2500
+  ./825A3539.jpg:
+    width: 1786
+    height: 2500
+  ./825A3550.jpg:
+    width: 1667
+    height: 2500
+  ./825A3552.jpg:
+    width: 1667
+    height: 2500
+  ./825A3570.jpg:
+    width: 1667
+    height: 2500
+  ./825A3573.jpg:
+    width: 1667
+    height: 2500
+  ./825A3574.jpg:
+    width: 1667
+    height: 2500
+  ./825A3578.jpg:
+    width: 2500
+    height: 1667
+  ./825A3583.jpg:
+    width: 2500
+    height: 1667
+  ./825A3588.jpg:
+    width: 2500
+    height: 1667
+  ./825A3594.jpg:
+    width: 2500
+    height: 1667
 ---
 
 I've been to the UK more times than I can count over the last five years, 

@@ -1,8 +1,8 @@
 ---
-title: "Slovenia"
-description: "Exploring Ljubljana, Lake Bled and Postjna Cave"
+title: Slovenia
+description: 'Exploring Ljubljana, Lake Bled and Postjna Cave'
 cover: ./825A9119.jpg
-date: 2024-10-15
+date: 2024-10-15T00:00:00.000Z
 images:
   - ./825A8560-Pano.jpg
   - ./825A8571.jpg
@@ -25,6 +25,70 @@ images:
   - ./825A9535.jpg
   - ./825A9538.jpg
   - ./825A9540.jpg
+imageDims:
+  ./825A9119.jpg:
+    width: 2500
+    height: 1667
+  ./825A8560-Pano.jpg:
+    width: 2500
+    height: 1875
+  ./825A8571.jpg:
+    width: 2500
+    height: 1667
+  ./825A9118.jpg:
+    width: 2500
+    height: 1667
+  ./825A9122.jpg:
+    width: 2500
+    height: 1667
+  ./825A9143.jpg:
+    width: 2500
+    height: 1667
+  ./825A9206.jpg:
+    width: 2000
+    height: 2500
+  ./825A9207.jpg:
+    width: 2500
+    height: 1667
+  ./825A9217.jpg:
+    width: 2500
+    height: 1667
+  ./825A9222.jpg:
+    width: 2500
+    height: 1667
+  ./825A9249.jpg:
+    width: 1667
+    height: 2500
+  ./825A9265.jpg:
+    width: 2500
+    height: 1667
+  ./825A9268.jpg:
+    width: 2500
+    height: 1667
+  ./825A9297.jpg:
+    width: 2500
+    height: 1667
+  ./825A9323.jpg:
+    width: 1667
+    height: 2500
+  ./825A9461-Enhanced-NR.jpg:
+    width: 2500
+    height: 1667
+  ./825A9466-Enhanced-NR.jpg:
+    width: 2500
+    height: 1667
+  ./825A9517.jpg:
+    width: 1667
+    height: 2500
+  ./825A9535.jpg:
+    width: 1667
+    height: 2500
+  ./825A9538.jpg:
+    width: 2500
+    height: 1667
+  ./825A9540.jpg:
+    width: 1667
+    height: 2500
 ---
 
 As mentioned in my Surrey and Portsmouth post, work has been one of the reasons I’ve travelled more over the last three years since getting my camera.

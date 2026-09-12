@@ -1,8 +1,8 @@
 ---
-title: "Crete in summer"
-description: "When Plan \"A\" fails, bring a camera"
+title: Crete in summer
+description: 'When Plan "A" fails, bring a camera'
 cover: ./825A2779.jpg
-date: 2025-07-30
+date: 2025-07-30T00:00:00.000Z
 images:
   - ./825A2216.jpg
   - ./825A2217.jpg
@@ -28,6 +28,79 @@ images:
   - ./825A2826.jpg
   - ./825A2827-3.jpg
   - ./825A2828.jpg
+imageDims:
+  ./825A2779.jpg:
+    width: 2500
+    height: 1667
+  ./825A2216.jpg:
+    width: 1786
+    height: 2500
+  ./825A2217.jpg:
+    width: 2500
+    height: 2000
+  ./825A2221.jpg:
+    width: 2500
+    height: 1667
+  ./825A2233.jpg:
+    width: 2500
+    height: 1667
+  ./825A2281.jpg:
+    width: 1667
+    height: 2500
+  ./825A2282.jpg:
+    width: 2500
+    height: 1667
+  ./825A2286.jpg:
+    width: 1667
+    height: 2500
+  ./825A2288.jpg:
+    width: 1667
+    height: 2500
+  ./825A2306.jpg:
+    width: 1667
+    height: 2500
+  ./825A2309.jpg:
+    width: 2500
+    height: 1667
+  ./825A2332.jpg:
+    width: 2500
+    height: 1667
+  ./825A2580.jpg:
+    width: 1667
+    height: 2500
+  ./825A2597.jpg:
+    width: 2000
+    height: 2500
+  ./825A2603.jpg:
+    width: 1667
+    height: 2500
+  ./825A2630.jpg:
+    width: 2500
+    height: 1667
+  ./825A2640.jpg:
+    width: 1667
+    height: 2500
+  ./825A2645.jpg:
+    width: 2500
+    height: 1667
+  ./825A2784.jpg:
+    width: 1667
+    height: 2500
+  ./825A2823-3.jpg:
+    width: 2500
+    height: 1667
+  ./825A2825-3.jpg:
+    width: 1667
+    height: 2500
+  ./825A2826.jpg:
+    width: 2500
+    height: 1667
+  ./825A2827-3.jpg:
+    width: 1667
+    height: 2500
+  ./825A2828.jpg:
+    width: 2000
+    height: 2500
 ---
 
 Summer 2025. I had been wanting to try scuba diving for a couple of years. Finally, I found the time, and a friend suggested a place in Crete that gave me the perfect opportunity to visit another friend from university whom I hadn't seen for a couple of years.
