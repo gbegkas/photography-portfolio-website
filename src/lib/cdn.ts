@@ -1,4 +1,4 @@
-const CDN_BASE = import.meta.env.PUBLIC_CDN_BASE;
+const CDN_BASE = "https://cdn.light-lens.com";
 
 function clean(name: string) {
   return name.replace(/^\.\//, "");
