@@ -22,3 +22,12 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Photo originals now stored in R2 — ignore image files but keep post metadata
+src/content/**/**/*.jpg
+src/content/**/**/*.jpeg
+src/content/**/**/*.png
+src/content/**/**/*.webp
+src/content/**/**/*.avif
+src/content/**/**/*.tiff
+src/content/**/**/*.gif
