@@ -1,7 +1,7 @@
 ---
 title: "London, Through a Different Lens"
 description: "A familiar city, a different approach"
-cover: ./825A3447.jpg
+cover: ./825A3542.jpg
 date: 2026-09-12
 images:
   - ./825A3447.jpg
